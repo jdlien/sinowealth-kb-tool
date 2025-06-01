@@ -1,59 +1,56 @@
-# Next Task: Reverse Engineering Lofree Flow Lite Upgrade Tool
+# Next Task: Integrate Decompiled Lofree Flow Lite Support
 
 ## Background Context
 
-We have successfully reverse-engineered the Lofree Flow Lite firmware update protocol through extensive analysis of:
-- USB packet captures (pcapng files)
-- Protocol implementation in sinowealth-kb-tool
-- Multiple firmware files and versions
-- Device behavior during mode transitions
+**MAJOR UPDATE**: We have successfully decompiled the official Lofree Flow Lite upgrade tool and extracted complete implementation details!
+
+We have achieved:
+- **Complete Protocol Understanding**: Extensive reverse engineering through USB captures and protocol analysis
+- **Working Prototype**: Basic sinowealth-kb-tool implementation with mode switching and firmware operations
+- **Official Tool Analysis**: **NEW** - Complete decompilation of `Lofree-Flow-Lite_Unpaired_OE921_V1.61_DLL_Upgrade.exe`
+- **Reference Implementation**: **NEW** - Full Rust reference code in `tasks/lofree-sinowealth-extension/reference-code/`
 
 ### Key Achievements
-1. **Complete Protocol Understanding**: We documented the entire firmware update sequence including:
-   - Runtime to bootloader mode switching
-   - 32-byte chunked firmware writing with checksums
-   - Critical LJMP footer with CRC16 validation
-   - Magic bootloader exit command sequence
+1. **Protocol Reverse Engineering**: Original work documented the firmware update sequence
+2. **Decompiled Source Analysis**: **NEW** - Complete C# source code revealing:
+   - 720-byte firmware header format (`UpgradeFileHeader.cs`)
+   - USB command protocol (`UsbCommand.cs`, `UsbCommandID.cs`)
+   - Device detection and validation logic
+   - Firmware packaging and extraction methods
+3. **Cross-Platform Reference**: **NEW** - Pure Rust implementation ready for integration
 
-2. **Working Implementation**: The sinowealth-kb-tool now successfully:
-   - Detects devices in both runtime and bootloader modes
-   - Switches between modes programmatically
-   - Writes firmware with proper formatting
-   - Exits bootloader mode correctly
+## Current Task: Production Integration
 
-3. **Documentation**: Created comprehensive notes in `lofree-flow-lite-firmware-development-notes.md`
+### Current Status
+**Decompilation Complete**: Full C# source code extracted to `decompiled_output/`
+**Reference Implementation**: Production-ready Rust code in `tasks/lofree-sinowealth-extension/reference-code/`
+**Integration Target**: sinowealth-kb-tool with Lofree Flow Lite support
 
-## Next Task: Analyzing the Official Upgrade Tool
+### Immediate Objectives
 
-### Target Application
-**File**: `Lofree/Lofree-Flow-Lite_Unpaired_OE921_V1.61_DLL_Upgrade.exe`
-- Version: V1.61
-- Type: Windows executable with DLL components
-- Purpose: Official firmware upgrade tool for unpaired devices
+1. **Code Integration** (HIGH PRIORITY)
+   - Integrate reference implementation into main sinowealth-kb-tool
+   - Add Lofree device detection to device database
+   - Implement firmware format parsing and validation
+   - Add USB protocol commands for Lofree devices
 
-### Objectives
+2. **Device Testing** (HIGH PRIORITY)
+   - Test with connected Lofree Flow Lite (VID:3554 PID:F811 or VID:05AC PID:024F)
+   - Validate device detection and information retrieval
+   - Test firmware reading capabilities
+   - Verify protocol implementation against real hardware
 
-1. **Understand Tool Architecture**
-   - Identify main executable and DLL dependencies
-   - Map out program flow and UI components
-   - Locate firmware blob within the executable
+3. **Firmware Operations** (MEDIUM PRIORITY)
+   - Implement safe firmware backup functionality
+   - Add firmware writing with comprehensive validation
+   - Implement progress reporting and error handling
+   - Add firmware compatibility checking
 
-2. **Extract Protocol Implementation**
-   - Find USB communication routines
-   - Compare with our reverse-engineered protocol
-   - Identify any missing or different commands
-   - Understand error handling mechanisms
-
-3. **Firmware Extraction**
-   - Locate embedded firmware (likely V1.61)
-   - Understand any encryption or compression
-   - Extract for comparison with our test firmwares
-
-4. **Additional Features**
-   - Device detection logic
-   - Version checking mechanisms
-   - Any undocumented commands or features
-   - Recovery procedures for failed updates
+4. **Production Features** (LOW PRIORITY)
+   - Add CLI commands specific to Lofree devices
+   - Implement embedded firmware extraction from upgrade packages
+   - Add device mode switching (Lofree ↔ Apple compatibility)
+   - Create comprehensive error recovery procedures
 
 ### Technical Approach
 

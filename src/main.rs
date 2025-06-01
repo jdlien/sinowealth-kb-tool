@@ -18,6 +18,7 @@ use thiserror::Error;
 
 mod device_selector;
 mod device_spec;
+pub mod devices;
 mod hid_tree;
 mod ihex;
 mod isp_device;

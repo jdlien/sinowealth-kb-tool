@@ -114,11 +114,17 @@ impl ISPDevice {
     }
 
     pub fn read_cycle(&self, read_fragment: ReadSection) -> Result<Vec<u8>, ISPError> {
-        // Check if this is a Lofree Flow Lite and inform user
+        // Check if this is a Lofree Flow Lite in bootloader mode
         if self.device_spec.vendor_id == 0x3554 && self.device_spec.product_id == 0xf808 {
-            eprintln!("Warning: Reading from Lofree Flow Lite is not yet implemented");
+            eprintln!("Warning: Reading from Lofree Flow Lite bootloader mode is not yet implemented");
             eprintln!("The Lofree protocol for reading needs to be reverse-engineered from successful read operations");
-            return Err(ISPError::HidError(HidError::HidApiError { message: "Reading from Lofree Flow Lite not supported yet".to_string() }));
+            return Err(ISPError::HidError(HidError::HidApiError { message: "Reading from Lofree Flow Lite bootloader not supported yet".to_string() }));
+        }
+        
+        // Check if this is a Lofree Flow Lite in runtime mode
+        if self.device_spec.vendor_id == 0x05ac && self.device_spec.product_id == 0x024f {
+            eprintln!("Lofree Flow Lite runtime mode - attempting to read firmware...");
+            return self.lofree_read_cycle(read_fragment);
         }
 
         self.enable_firmware()?;
@@ -295,6 +301,12 @@ impl ISPDevice {
     /// Side-effect: enables reading the firmware without erasing flash first.
     /// Credits to @gashtaan for finding this out.
     fn enable_firmware(&self) -> Result<(), ISPError> {
+        // Special handling for Lofree Flow Lite devices
+        if self.device_spec.vendor_id == 0x05ac && self.device_spec.product_id == 0x024f {
+            eprintln!("Enabling Lofree Flow Lite firmware mode...");
+            return self.lofree_enable_firmware_mode();
+        }
+        
         eprintln!("Enabling firmware...");
         let cmd: [u8; COMMAND_LENGTH] = [self.get_cmd_report_id(), CMD_ENABLE_FIRMWARE, 0, 0, 0, 0];
 
@@ -575,6 +587,140 @@ impl ISPDevice {
     }
     
     /// Try server management sequence based on DLL analysis
+    fn lofree_enable_firmware_mode(&self) -> Result<(), ISPError> {
+        // Use the successful pattern from lofree_try_bootloader_commands
+        // Try the 5bb5 command pattern which we know works for mode switching
+        
+        eprintln!("Sending Lofree firmware enable commands...");
+        
+        // Try the established command patterns that work
+        let enable_commands = [
+            vec![0x06, 0x5b, 0xb5, 0x0d, 0x00], // EnterUsbUpdateMode with 5bb5 prefix
+            vec![0x06, 0x5b, 0xb5, 0x55, 0x01], // Enable command from existing code
+            vec![0x06, 0x0d, 0x00, 0x00, 0x00], // Direct EnterUsbUpdateMode
+        ];
+        
+        for (i, cmd_data) in enable_commands.iter().enumerate() {
+            eprintln!("Trying enable command {}: {:02X?}", i+1, cmd_data);
+            let mut cmd = cmd_data.clone();
+            cmd.resize(65, 0x00); // Ensure 65 bytes total
+            
+            // Try write (output report) first, then feature report
+            match self.cmd_device.write(&cmd) {
+                Ok(_) => {
+                    eprintln!("Enable command {} sent successfully (output)", i+1);
+                    thread::sleep(time::Duration::from_millis(100));
+                },
+                Err(_) => {
+                    // Fall back to feature report
+                    match self.cmd_device.send_feature_report(&cmd) {
+                        Ok(_) => {
+                            eprintln!("Enable command {} sent successfully (feature)", i+1);
+                            thread::sleep(time::Duration::from_millis(100));
+                        },
+                        Err(e) => {
+                            eprintln!("Enable command {} failed: {}", i+1, e);
+                        }
+                    }
+                }
+            }
+        }
+        
+        Ok(())
+    }
+
+    fn lofree_read_cycle(&self, read_fragment: ReadSection) -> Result<Vec<u8>, ISPError> {
+        // Implement Lofree-specific read cycle
+        // Based on decompiled UsbCommand protocol
+        
+        self.lofree_enable_firmware_mode()?;
+        
+        let (start_addr, length) = match read_fragment {
+            ReadSection::Firmware => (0, self.device_spec.platform.firmware_size),
+            ReadSection::Bootloader => (
+                self.device_spec.platform.firmware_size,
+                self.device_spec.platform.bootloader_size,
+            ),
+            ReadSection::Full => (
+                0,
+                self.device_spec.platform.firmware_size + self.device_spec.platform.bootloader_size,
+            ),
+        };
+
+        let firmware = self.lofree_read_firmware(start_addr, length)?;
+
+        if self.device_spec.reboot {
+            self.reboot();
+        }
+
+        Ok(firmware)
+    }
+    
+    fn lofree_read_firmware(&self, start_addr: usize, length: usize) -> Result<Vec<u8>, ISPError> {
+        eprintln!("Reading firmware using Lofree protocol...");
+        
+        // For now, implement a simple version that uses ReadFlashData commands
+        // Command ID 8 = ReadFlashData from our decompiled analysis
+        
+        let page_size = self.device_spec.platform.page_size;
+        let num_pages = length / page_size;
+        let mut result: Vec<u8> = vec![];
+
+        eprintln!("Reading {} pages of {} bytes each...", num_pages, page_size);
+        let bar = ProgressBar::new(num_pages as u64);
+
+        for page in 0..num_pages {
+            let addr = start_addr + page * page_size;
+            
+            // Prepare ReadFlashData command
+            let mut cmd = vec![0u8; 64];
+            cmd[0] = self.get_cmd_report_id(); // Report ID
+            cmd[1] = 8;  // ReadFlashData command ID
+            cmd[2] = 0;  // Status
+            cmd[3] = ((addr >> 8) & 0xFF) as u8;  // Address high
+            cmd[4] = (addr & 0xFF) as u8;         // Address low
+            
+            // Add length parameter (32 bytes for page size)
+            cmd[5] = page_size as u8;
+            cmd[6] = 0;
+            cmd[7] = 0;
+            cmd[8] = 0;
+            
+            // Send command using output report
+            match self.cmd_device.write(&cmd) {
+                Ok(_) => eprintln!("Read command {} sent", page),
+                Err(e) => eprintln!("Read command {} failed: {}", page, e),
+            }
+            
+            // Read response using input report
+            let mut response = vec![0u8; 64];
+            match self.cmd_device.read_timeout(&mut response, 1000) {
+                Ok(_) => {
+                    // Extract page data from response (need to figure out the response format)
+                    // For now, assume data starts at offset 5
+                    if response.len() >= 5 + page_size {
+                        result.extend_from_slice(&response[5..5 + page_size]);
+                    } else {
+                        eprintln!("Warning: Short response from device");
+                        result.extend_from_slice(&response[5..]);
+                        result.resize(result.len() + (page_size - (response.len() - 5)), 0);
+                    }
+                }
+                Err(e) => {
+                    eprintln!("Error reading page {}: {}", page, e);
+                    // Fill with zeros for failed page
+                    result.extend_from_slice(&vec![0u8; page_size]);
+                }
+            }
+            
+            bar.inc(1);
+        }
+        
+        bar.finish();
+        
+        Ok(result)
+    }
+
     fn lofree_try_server_management_sequence(&self) -> Result<(), ISPError> {
         // Based on CS_UsbServer_Exit, CS_UsbServer_Start, CS_UsbServer_ReStartBatteryOptimize
         // These might use different command prefixes or structures

@@ -9,6 +9,10 @@ edition = "2021"
 license = "MIT"
 rust-version = "1.65"
 
+[lib]
+name = "sinowealth_kb_tool"
+path = "src/lib.rs"
+
 [[bin]]
 name = "lofree-test"
 path = "src/lofree_test_tool.rs"
@@ -52,6 +56,10 @@ path = "test_mode_switch_correct.rs"
 [[bin]]
 name = "test-bootloader-exit"
 path = "test_bootloader_exit.rs"
+
+[[bin]]
+name = "test-lofree-firmware"
+path = "test_lofree_firmware.rs"
 
 [dependencies]
 clap = "4.1"
