@@ -1,0 +1,59 @@
+--- a/src/isp_device.rs
++++ b/src/isp_device.rs
+@@ -737,9 +737,15 @@ impl ISPDevice {
+         // Open a separate read handle if on macOS
+         let hidapi = hidapi::HidApi::new().map_err(ISPError::HidError)?;
+         
+-        // On macOS, we need non-exclusive access
++        // CRITICAL FIX: On macOS, we need EXCLUSIVE access to read feature reports
++        // from devices using vendor/simulation usage pages. This is the opposite
++        // of what we do elsewhere in the code, but it's required for the bootloader.
+         #[cfg(target_os = "macos")]
+-        hidapi.set_open_exclusive(false);
++        {
++            eprintln!("Setting exclusive access for bootloader ACK reading...");
++            hidapi.set_open_exclusive(true);  // Changed from false to true!
++        }
++        #[cfg(not(target_os = "macos"))]
++        hidapi.set_open_exclusive(false);
+         
+         let read_device_handle = if use_read_timeout {
+             self.cmd_device.get_device_info()
+@@ -758,8 +764,17 @@ impl ISPDevice {
+             
+             let read_result = if let Some(ref read_device) = read_device_handle {
+                 // macOS: use read_timeout on separate handle
+-                read_device.read_timeout(&mut buffer, 50)
++                // But first try get_feature_report with exclusive access
++                match read_device.get_feature_report(&mut buffer) {
++                    Ok(len) if len > 0 => Ok(len),
++                    _ => {
++                        // Fall back to read_timeout if feature report fails
++                        eprintln!("Feature report failed, trying read_timeout...");
++                        read_device.read_timeout(&mut buffer, 50)
++                    }
++                }
+             } else {
+                 // Other platforms: use get_feature_report
+                 self.cmd_device.get_feature_report(&mut buffer)
+@@ -804,10 +819,15 @@ impl ISPDevice {
+             attempts += 1;
+             if attempts > MAX_ATTEMPTS {
+                 eprintln!("✗ Timeout waiting for bootloader ACK after {} attempts", MAX_ATTEMPTS);
+-                eprintln!("Note: On macOS, HID feature report reading may not work correctly.");
+-                eprintln!("The bootloader might still have accepted the firmware.");
+-                // Don't return error - let it try REBOOT anyway
+-                return Ok(());
++                
++                #[cfg(target_os = "macos")]
++                {
++                    return Err(ISPError::HidError(HidError::HidApiError {
++                        message: "Failed to read ACK. This might happen if another process has the device open. Try closing other HID tools.".to_string()
++                    }));
++                }
++                
++                #[cfg(not(target_os = "macos"))]
++                return Err(ISPError::DeviceSpecificError { msg: "Timeout waiting for ACK".to_string() });
+             }
+             
+             thread::sleep(time::Duration::from_millis(10));
