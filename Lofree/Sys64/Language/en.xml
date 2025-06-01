@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Total>
+  <Control>
+    <lbl_StayOffTime>Stay light off time</lbl_StayOffTime>
+    <lbl_B>B:</lbl_B>
+    <lbl_G>G:</lbl_G>
+    <lbl_R>R:</lbl_R>
+    <lbl_Preset>Preset color</lbl_Preset>
+    <lbl_Preview>Preview</lbl_Preview>
+    <lbl_LEDColor>Light color</lbl_LEDColor>
+    <lbl_Speed>speed</lbl_Speed>
+    <lbl_Brightness>Brightness</lbl_Brightness>
+    <lbl_MusicTips>The lights will dynamically adjust to the rhythm of the system sound</lbl_MusicTips>
+    <lbl_Smooth>Smoothness</lbl_Smooth>
+    <lbl_Amp>Amplitude</lbl_Amp>
+    <lbl_LightDirection>Light direction</lbl_LightDirection> 
+    <lbl_DriveVer>Version: 1.1.1.1</lbl_DriveVer>
+    <lbl_Lan>Language</lbl_Lan>
+    <lbl_DeviceInfo>Device information</lbl_DeviceInfo>
+    <lbl_DongleVer>Receiver Version</lbl_DongleVer>   
+    <lbl_KBVer>Keyboard Version</lbl_KBVer>
+    <lbl_PairTool>Pair tool</lbl_PairTool>
+    <lbl_ReportRate>ReportRate</lbl_ReportRate>  
+    <lbl_Restore>Restore</lbl_Restore>
+    <lbl_Other>Other</lbl_Other>   
+    <lbl_CloseWin>When close the windows</lbl_CloseWin>   
+
+    <lbl_ConDev>Please Connect Your  Device</lbl_ConDev>
+    <lbl_ClickEnter>Please connect the device first and then click to enable and use it.</lbl_ClickEnter>
+    <lbl_PairTips>Please operate the keyboard to enter pairing mode (switch to wireless mode first, press and hold the Fn+4 key combination for 3 seconds until the signal light blue flashes slowly), and click "start pairing" near the receiver or press the space bar on the keyboard</lbl_PairTips> 
+    <lbl_NewVerTips>Be sure to plug your device and receiver into your computer at the same time for a firmware upgrade! If it cannot be used after the upgrade, pair it and use it again!</lbl_NewVerTips>
+    <lbl_UpdateTips>Make sure the device is connected while upgrading. Do not unplug the device. </lbl_UpdateTips>
+
+    <rd_sys_Win>Win</rd_sys_Win>
+    <rd_sys_Mac>Mac</rd_sys_Mac>
+    <rd_sys_iOS>iOS</rd_sys_iOS>
+    <rd_sys_Android>Android</rd_sys_Android>
+
+    <rd_fn_Default>Default</rd_fn_Default>
+    <rd_fn_Fn1>Fn</rd_fn_Fn1>
+    <rd_fn_Fn2>Fn2</rd_fn_Fn2>
+
+    <rd_Key_KB>Keyboard</rd_Key_KB>
+    <rd_Key_Combo>Combo key</rd_Key_Combo>
+    <rd_Key_Media>Multimedia</rd_Key_Media>
+    <rd_Key_Macro>Macro</rd_Key_Macro>
+    <rd_Key_Other>Other</rd_Key_Other>
+    <rd_Key_Forbid>Disable</rd_Key_Forbid>
+
+    <btn_Disable>Disable</btn_Disable>
+    <btn_Enable>Enable</btn_Enable>
+
+    <rd_LightMode>Light mode</rd_LightMode>
+    <rd_CustomMode>Custom mode</rd_CustomMode>
+
+    <rd_Light1> </rd_Light1>
+    <rd_Light2> </rd_Light2>  
+    <rd_Light3> </rd_Light3>
+    <rd_Light4> </rd_Light4> 
+    <rd_Light5> </rd_Light5>
+    <rd_Light6> </rd_Light6> 
+    <rd_Light7>  </rd_Light7>
+    <rd_Light8> </rd_Light8> 
+    <rd_Light9> </rd_Light9>
+    <rd_Light10> </rd_Light10> 
+    <rd_Light11> </rd_Light11>
+    <rd_Light12> </rd_Light12>  
+
+    <rd_CusLight1> </rd_CusLight1>
+    <rd_CusLight2> </rd_CusLight2>
+    <rd_CusLight3> </rd_CusLight3>  
+    <rd_CusLight4> </rd_CusLight4>
+    <rd_CusLight5> </rd_CusLight5> 
+
+    <rd_LTR>由左至右</rd_LTR>
+    <rd_RTL>由右至左</rd_RTL>
+
+    <lbl_KeyList>Key list</lbl_KeyList>
+    <lbl_MacroList>Macro list</lbl_MacroList>
+    <rd_AutoDelay>Automatic insertion delay</rd_AutoDelay>
+    <rd_DefaultDelay>Default time delay</rd_DefaultDelay>
+    <rd_UntilRels>Cycle until any key released</rd_UntilRels>
+    <rd_UntilPres>Cycle until any key pressed</rd_UntilPres>
+    <rd_UntilThisPre>Cycle until this key pressed</rd_UntilThisPre>
+    <rd_CycleTimes>Times of cycles</rd_CycleTimes>
+    <lbl_InsertEvent>Insert event</lbl_InsertEvent>
+    
+    <rd_Music1> Normal </rd_Music1>
+    <rd_Music2>    Rock  </rd_Music2>  
+    <rd_Music3> Passion </rd_Music3>
+
+    <rd_rp_125Hz>125Hz</rd_rp_125Hz>
+    <rd_rp_250Hz>250Hz</rd_rp_250Hz>
+    <rd_rp_500Hz>500Hz</rd_rp_500Hz>
+    <rd_rp_1000Hz>1000Hz</rd_rp_1000Hz>
+
+    <rd_win_Exit>Exit</rd_win_Exit>
+    <rd_win_Pallet>Resides in the system tray area</rd_win_Pallet>
+
+    <btn_EnableAll>Enable all key</btn_EnableAll>
+    <btn_Pair>Pair</btn_Pair>
+    <btn_Restore>Restore</btn_Restore>  
+    <btn_DongleUpdate>Check Update</btn_DongleUpdate>   
+    <btn_KBUpdate>Check Update</btn_KBUpdate>    
+    <btn_DelKey>Delete</btn_DelKey>
+    <btn_ModKey>Modify</btn_ModKey>
+    <btn_DelMacro>Delete</btn_DelMacro>
+    <btn_NewMacro>New Macro</btn_NewMacro>
+    <btn_SaveMacro>Save</btn_SaveMacro>
+    <btn_OK>OK</btn_OK>
+    <btn_Cancel>Cancel</btn_Cancel>
+
+    <btn_StartUpdate>Update(Space)</btn_StartUpdate>
+    <btn_StartPair>Pair(Space)</btn_StartPair>
+    	
+    <ckb_Colorful>Colorful</ckb_Colorful>	
+    <ckb_Bootstrap>Start automatically at boot</ckb_Bootstrap>
+    <ckb_SmartSpeed>Smart Speed X Low Latency</ckb_SmartSpeed>
+    <ckb_KeyNoPunch>6-Key Rollover Mode</ckb_KeyNoPunch>
+    <ckb_ExchangeWASD>Swap WASD (WASD become arrow keys)</ckb_ExchangeWASD>
+
+    <MenuItem_OpenMenu>Open Menu</MenuItem_OpenMenu>
+    <MenuItem_Exit>Exit</MenuItem_Exit>
+    <MenuItem_Modify>Modify</MenuItem_Modify>
+    <MenuItem_DelKey>Delete</MenuItem_DelKey>
+    <MenuItem_Export>Export</MenuItem_Export>
+    <MenuItem_Rename>Rename</MenuItem_Rename>
+    <MenuItem_DelMacro>Delete</MenuItem_DelMacro>
+    <MenuItem_NewMacro>New Macro</MenuItem_NewMacro>
+    <MenuItem_Import>Import</MenuItem_Import>
+   <Select_Macro>Select Macro</Select_Macro>
+    <ComName>Shenzhen Lofree Culture Co.,Ltd.</ComName>
+    <ComNet>https://www.lofree.co/</ComNet>
+    <LightDsr>The driving lights are for reference only, and the actual keyboard used shall prevail</LightDsr>
+    <lbl_ClickEnter_2>(Please connect the device first and click to start using.)</lbl_ClickEnter_2>
+  </Control>
+  <Description>
+    <btn_Restore>Restore</btn_Restore>  
+    <btn_DongleUpdate>Check Update</btn_DongleUpdate>   
+    <btn_KBUpdate>Check Update</btn_KBUpdate>    
+    <btn_Export>Export</btn_Export>
+    <btn_Import>Import</btn_Import>
+    <btn_Edit>Rename</btn_Edit>
+    <btn_Del>Delete</btn_Del>
+    <btn_New>New Profile</btn_New>
+    <btn_Reset>Reset</btn_Reset>
+
+    <rd_Light1> </rd_Light1>
+    <rd_Light2> </rd_Light2>  
+    <rd_Light3> </rd_Light3>
+    <rd_Light4> </rd_Light4> 
+    <rd_Light5> </rd_Light5>
+    <rd_Light6> </rd_Light6> 
+    <rd_Light7> </rd_Light7>
+    <rd_Light8> </rd_Light8> 
+    <rd_Light9> </rd_Light9>
+    <rd_Light10> </rd_Light10> 
+    <rd_Light11> </rd_Light11>
+    <rd_Light12> </rd_Light12>  
+
+    <rd_Media1>Screen+</rd_Media1>
+    <rd_Media2>Screen-</rd_Media2>  
+    <rd_Media3>Mute</rd_Media3>
+    <rd_Media4>Volume+</rd_Media4> 
+    <rd_Media5>Volume-</rd_Media5>
+    <rd_Media6>Play/Pause</rd_Media6> 
+    <rd_Media7>Previous</rd_Media7>
+    <rd_Media8>Next</rd_Media8> 
+    <rd_Media9>Stop</rd_Media9>
+    <rd_Media10>Media Player</rd_Media10> 
+    <rd_Media11>Email</rd_Media11>
+    <rd_Media12>My Computer</rd_Media12>  
+    <rd_Media13>Calculator</rd_Media13>
+    <rd_Media14>Home Page</rd_Media14> 
+    <rd_Media15>Search</rd_Media15>
+    <rd_Media16>Favorites</rd_Media16> 
+    <rd_Media17>Web Forward</rd_Media17>
+    <rd_Media18>Web Back</rd_Media18> 
+    <rd_Media19>Web Stop</rd_Media19>
+    <rd_Media20>Refresh</rd_Media20>     
+    <rd_Media21>Left Button</rd_Media21>
+    <rd_Media22>Right Button</rd_Media22> 
+    <rd_Media23>Middle Button</rd_Media23>
+    <rd_Media24>Forward</rd_Media24> 
+    <rd_Media25>Back</rd_Media25>
+
+    <rd_AutoDelay>Automatic Insertion Delay</rd_AutoDelay>
+    <rd_DefaultDelay>Default Time Delay</rd_DefaultDelay>
+    <rd_CycleTimes>Times of cycles</rd_CycleTimes>
+    <rd_UntilThisPre>Cycle until this key pressed</rd_UntilThisPre>
+    <rd_UntilPres>Cycle until any key pressed</rd_UntilPres>
+    <rd_UntilRels>Cycle until any key released</rd_UntilRels>
+    
+    <rd_rp_125Hz>125Hz</rd_rp_125Hz>
+    <rd_rp_250Hz>250Hz</rd_rp_250Hz>
+    <rd_rp_500Hz>500Hz</rd_rp_500Hz>
+    <rd_rp_1000Hz>1000Hz</rd_rp_1000Hz>
+    <rd_LTR>Left to Right</rd_LTR>
+    <rd_RTL>Right to Left</rd_RTL>
+    
+    <rd_Key_KB>Keyboard</rd_Key_KB>
+    <rd_Key_Combo>Combo key</rd_Key_Combo>
+    <rd_Key_Media>Multimedia</rd_Key_Media>
+    <rd_Key_Macro>Macro</rd_Key_Macro>
+    <rd_Key_Other>Other</rd_Key_Other>
+    <rd_Key_Forbid>Disable</rd_Key_Forbid>
+
+    <rd_LightMode>Light mode</rd_LightMode>
+    <rd_CustomMode>Custom light mode</rd_CustomMode>
+	
+    <ckb_Colorful>Colorful</ckb_Colorful>	
+    <ckb_Bootstrap>Start automatically at boot</ckb_Bootstrap>
+    <ckb_SmartSpeed>Smart Speed X Low Latency</ckb_SmartSpeed>
+    <ckb_KeyNoPunch>6-Key Rollover Mode</ckb_KeyNoPunch>
+    <ckb_ExchangeWASD>Swap WASD (WASD become arrow keys)</ckb_ExchangeWASD>
+
+    <MenuItem_OpenMenu>Menu</MenuItem_OpenMenu>
+    <MenuItem_Exit>Exit</MenuItem_Exit>
+    <MenuItem_Modify>Modify</MenuItem_Modify>
+    <MenuItem_DelKey>Delete</MenuItem_DelKey>
+    <MenuItem_Export>Export Macro</MenuItem_Export>
+    <MenuItem_Rename>Rename</MenuItem_Rename>
+    <MenuItem_DelMacro>Delete</MenuItem_DelMacro>
+    <MenuItem_NewMacro>New Macro</MenuItem_NewMacro>
+    <MenuItem_Import>Import Macro</MenuItem_Import>
+  </Description>
+  <ComboBox>
+    <Item1>Key down</Item1>
+    <Item2>Key up</Item2>
+    <Item3>Delay</Item3>
+    <Item4>Ledt button</Item4>
+    <Item5>Right button</Item5>
+    <Item6>Middle button</Item6>
+    <Item7>Forward button</Item7>
+    <Item8>Backward button</Item8>
+    <Item9>10Sec</Item9>
+    <Item10>30Sec</Item10>
+    <Item11>1Min</Item11>
+    <Item12>3Min</Item12>
+    <Item13>5Min</Item13>
+    <Item14>10Min</Item14>
+    <Item15>15Min</Item15>
+    <Item16>20Min</Item16>
+    <Item17>25Min</Item17>
+    <Item18>30Min</Item18>
+    <Item19>35Min</Item19>
+    <Item20>40Min</Item20>
+  </ComboBox>
+
+  <KeyFunction>
+    <Item1>0x00,0x0000,Disable</Item1> 
+    <Item2>0x01,0x02,LShift</Item2> 
+    <Item3>0x01,0x20,RShift</Item3> 
+    <Item4>0x01,0x01,LCtrl</Item4> 
+    <Item5>0x01,0x08,LWin</Item5> 
+    <Item6>0x01,0x04,LAlt</Item6> 
+    <Item7>0x01,0x40,RAlt</Item7> 
+    <Item8>0x01,0x80,RWin</Item8> 
+    <Item9>0x01,0x10,RCtrl</Item9> 
+    <Item10>0x02,0x35,`</Item10> 
+    <Item11>0x02,0x2D,-</Item11> 
+    <Item12>0x02,0x2E,=</Item12> 
+    <Item13>0x02,0x2A,←</Item13> 
+    <Item14>0x02,0x2F,[</Item14> 
+    <Item15>0x02,0x30,]</Item15> 
+    <Item16>0x02,0x31,\</Item16> 
+    <Item17>0x02,0x33,;</Item17> 
+    <Item18>0x02,0x34,'</Item18> 
+    <Item19>0x02,0x36,,</Item19> 
+    <Item20>0x02,0x37,.</Item20> 
+    <Item21>0x02,0x38,/</Item21> 
+    <Item22>0x02,0x54,Num/</Item22> 
+    <Item23>0x02,0x55,Num*</Item23> 
+    <Item24>0x02,0x56,Num-</Item24> 
+    <Item25>0x02,0x57,Num+</Item25> 
+    <Item26>0x02,0x63,Num.</Item26> 
+    <Item27>0x02,0x87,K56 -\\ろ</Item27> 
+    <Item28>0x02,0x88,Roma 力夕力ナ</Item28> 
+    <Item29>0x02,0x89,K14 |    ¥</Item29> 
+    <Item30>0x02,0x67,=</Item30> 
+    <Item31>0x02,0x8B,K131 無変換</Item31> 
+    <Item32>0x02,0x8A,K132 変換</Item32> 
+    <Item33>0x02,0x91,K150 한사</Item33> 
+    <Item34>0x02,0x90,K151 한/영 かな</Item34> 
+    <Item35>0x02,0x29,Esc</Item35> 
+    <Item36>0x02,0x3A,F1</Item36> 
+    <Item37>0x02,0x3B,F2</Item37> 
+    <Item38>0x02,0x3C,F3</Item38> 
+    <Item39>0x02,0x3D,F4</Item39> 
+    <Item40>0x02,0x3E,F5</Item40> 
+    <Item41>0x02,0x3F,F6</Item41> 
+    <Item42>0x02,0x40,F7</Item42> 
+    <Item43>0x02,0x41,F8</Item43> 
+    <Item44>0x02,0x42,F9</Item44> 
+    <Item45>0x02,0x43,F10</Item45> 
+    <Item46>0x02,0x44,F11</Item46> 
+    <Item47>0x02,0x45,F12</Item47> 
+    <Item48>0x02,0x1E,1</Item48> 
+    <Item49>0x02,0x1F,2</Item49> 
+    <Item50>0x02,0x20,3</Item50> 
+    <Item51>0x02,0x21,4</Item51> 
+    <Item52>0x02,0x22,5</Item52> 
+    <Item53>0x02,0x23,6</Item53> 
+    <Item54>0x02,0x24,7</Item54> 
+    <Item55>0x02,0x25,8</Item55> 
+    <Item56>0x02,0x26,9</Item56> 
+    <Item57>0x02,0x27,0</Item57> 
+    <Item58>0x02,0x2B,Tab</Item58> 
+    <Item59>0x02,0x14,Q</Item59> 
+    <Item60>0x02,0x1A,W</Item60> 
+    <Item61>0x02,0x08,E</Item61> 
+    <Item62>0x02,0x15,R</Item62> 
+    <Item63>0x02,0x17,T</Item63> 
+    <Item64>0x02,0x1C,Y</Item64> 
+    <Item65>0x02,0x18,U</Item65> 
+    <Item66>0x02,0x0C,I</Item66> 
+    <Item67>0x02,0x12,O</Item67> 
+    <Item68>0x02,0x13,P</Item68> 
+    <Item69>0x02,0x39,CapsLock</Item69> 
+    <Item70>0x02,0x04,A</Item70> 
+    <Item71>0x02,0x16,S</Item71> 
+    <Item72>0x02,0x07,D</Item72> 
+    <Item73>0x02,0x09,F</Item73> 
+    <Item74>0x02,0x0A,G</Item74> 
+    <Item75>0x02,0x0B,H</Item75> 
+    <Item76>0x02,0x0D,J</Item76> 
+    <Item77>0x02,0x0E,K</Item77> 
+    <Item78>0x02,0x0F,L</Item78> 
+    <Item79>0x02,0x28,Enter</Item79> 
+    <Item80>0x02,0x1D,Z</Item80> 
+    <Item81>0x02,0x1B,X</Item81> 
+    <Item82>0x02,0x06,C</Item82> 
+    <Item83>0x02,0x19,V</Item83> 
+    <Item84>0x02,0x05,B</Item84> 
+    <Item85>0x02,0x11,N</Item85> 
+    <Item86>0x02,0x10,M</Item86> 
+    <Item87>0x02,0x2C,Space</Item87> 
+    <Item88>0x02,0x65,Apps</Item88> 
+    <Item89>0x02,0x46,Screen</Item89> 
+    <Item90>0x02,0x47,Scroll</Item90> 
+    <Item91>0x02,0x48,Pause</Item91> 
+    <Item92>0x02,0x49,Insert</Item92> 
+    <Item93>0x02,0x4A,Home</Item93> 
+    <Item94>0x02,0x4B,PageUp</Item94> 
+    <Item95>0x02,0x4C,Del</Item95> 
+    <Item96>0x02,0x4D,End</Item96> 
+    <Item97>0x02,0x4E,PageDn</Item97> 
+    <Item98>0x02,0x52,↑</Item98> 
+    <Item99>0x02,0x50,←</Item99> 
+    <Item100>0x02,0x51,↓</Item100> 
+    <Item101>0x02,0x4F,→</Item101> 
+    <Item102>0x02,0x53,NumLock</Item102> 
+    <Item103>0x02,0x5F,Num7</Item103> 
+    <Item104>0x02,0x60,Num8</Item104> 
+    <Item105>0x02,0x61,Num9</Item105> 
+    <Item106>0x02,0x5C,Num4</Item106> 
+    <Item107>0x02,0x5D,Num5</Item107> 
+    <Item108>0x02,0x5E,Num6</Item108> 
+    <Item109>0x02,0x59,Num1</Item109> 
+    <Item110>0x02,0x5A,Num2</Item110> 
+    <Item111>0x02,0x5B,Num3</Item111> 
+    <Item112>0x02,0x62,Num0</Item112> 
+    <Item113>0x02,0x58,Enter</Item113> 
+    <Item114>0x02,0x32,K42</Item114> 
+    <Item115>0x02,0x64,K45</Item115> 
+    <Item116>0x02,0x85,K107</Item116> 
+    <Item117>0x03,0x006F,Screen+</Item117>
+    <Item118>0x03,0x0070,Screen-</Item118>  
+    <Item119>0x03,0x0183,Media Player</Item119>
+    <Item120>0x03,0x00CD,Play/Pause</Item120>
+    <Item121>0x03,0x00B5,Next</Item121>
+    <Item122>0x03,0x00B6,Previous</Item122>
+    <Item123>0x03,0x00B7,Stop</Item123>
+    <Item124>0x03,0x00E2,Mute</Item124>
+    <Item125>0x03,0x00E9,Volume+</Item125>
+    <Item126>0x03,0x00EA,Volume-</Item126>
+    <Item127>0x03,0x018A,Email</Item127>
+    <Item128>0x03,0x0192,Calculator</Item128>
+    <Item129>0x03,0x0194,My Computer</Item129>
+    <Item130>0x03,0x0223,Home Page</Item130>
+    <Item131>0x03,0x0221,Search</Item131>
+    <Item132>0x03,0x0225,Web Forward</Item132>
+    <Item133>0x03,0x0224Web Back</Item133>
+    <Item134>0x03,0x0226,Web Stop</Item134>
+    <Item135>0x03,0x0227,Refresh</Item135>
+    <Item136>0x03,0x022A,Favorites</Item136>    
+    <Item137>0x05,0x0000,BT1</Item137>  
+    <Item138>0x05,0x0001,BT2</Item138>
+    <Item139>0x05,0x0002,BT3</Item139>
+    <Item140>0x05,0x0003,2.4G</Item140>
+    <Item141>0x05,0x0004,Light mode cycle+</Item141>
+    <Item142>0x05,0x0005,Light mode+</Item142>
+    <Item143>0x05,0x0006,Light mode-</Item143>
+    <Item144>0x05,0x0007,Light color cycle</Item144>
+    <Item145>0x05,0x0008,Light color+</Item145>
+    <Item146>0x05,0x0009,Light color-</Item146>
+    <Item147>0x05,0x000A, </Item147>
+    <Item148>0x05,0x000B,Light speed cycle</Item148>
+    <Item149>0x05,0x000C,Light speed+</Item149>
+    <Item150>0x05,0x000D,Light speed-</Item150>
+    <Item151>0x05,0x000E,Light brightness cycle</Item151>
+    <Item152>0x05,0x000F,Light brightness+</Item152>
+    <Item153>0x05,0x0010,Light brightness-</Item153>  
+    <Item154>0x05,0x0011,Check battery</Item154> 
+    <Item155>0x05,0x0012,Light switch</Item155>  
+    <Item156>0x05,0x0013,FN Lock</Item156> 
+    <Item157>0x05,0x0014,BLE</Item157>  
+    <Item158>0x05,0x0015,Wired</Item158> 
+    <Item159>0x05,0x0016,Clear BLE record</Item159>  
+    <Item160>0x05,0x0017,Restore</Item160>   
+    <Item161>0x05,0x0018,windows</Item161>  
+    <Item162>0x05,0x0019,mac</Item162> 
+    <Item163>0x05,0x001A,android</Item163>  
+    <Item164>0x05,0x001B,iOS</Item164> 
+    <Item165>0x05,0x001C,Disable ALT+TAB</Item165>  
+    <Item166>0x05,0x001D,Disable ALT+FN</Item166> 
+    <Item167>0x05,0x001E,Disable SHIFT+TAB</Item167>  
+    <Item168>0x05,0x001F,Disable WIN</Item168> 
+    <Item169>0x05,0x0020,Other static LED</Item169>  
+    <Item170>0x05,0x0021,Disable WIN+APP</Item170> 
+    <Item171>0x05,0x0022,Full keyboard lock key</Item171> 
+    <Item172>0x05,0x0023,Copilot(Only Win System)</Item172> 
+    <Item173>0x05,0x0024,Light strip switch</Item173>  
+    <Item174>0x05,0x0025,Light strip mode cycle</Item174> 
+    <Item175>0x05,0x0026,Light strip mode+</Item175>  
+    <Item176>0x05,0x0027,Light strip mode-</Item176>   
+    <Item177>0x05,0x0028,Light strip brightness cycle</Item177>  
+    <Item178>0x05,0x0029,Light strip brightness+</Item178> 
+    <Item179>0x05,0x002A,Light strip brightness-</Item179>  
+    <Item180>0x05,0x002B,Light strip speed cycle</Item180> 
+    <Item181>0x05,0x002C,Light strip speed+</Item181>  
+    <Item182>0x05,0x002D,Light strip speed-</Item182> 
+    <Item183>0x05,0x002E,Light strip color cycle</Item183>  
+    <Item184>0x05,0x002F,Light strip color+</Item184> 
+    <Item185>0x05,0x0030,Light strip color-</Item185> 
+    <Item186>0x06,0x01,FN</Item186> 
+    <Item187>0x06,0x03,FN2</Item187> 
+    <Item188>0x09,0x0001,Queue1</Item188>     
+    <Item189>0x09,0x0002,Queue2</Item189> 
+    <Item190>0x09,0x0003,Queue3</Item190>     
+    <Item191>0x09,0x0004,Queue4</Item191> 
+    <Item192>0x09,0x0005,Queue5</Item192>     
+    <Item193>0x09,0x0006,Queue6</Item193> 
+    <Item194>0x09,0x0007,Queue7</Item194>    
+    <Item195>0x09,0x0008,Queue8</Item195> 
+    <Item196>0x09,0x0009,Queue9</Item196>     
+    <Item197>0x09,0x000A,Queue10</Item197> 
+    <Item198>0x09,0x000B,Queue11</Item198>     
+    <Item199>0x09,0x000C,Queue12</Item199> 
+    <Item200>0x09,0x000D,Queue13</Item200>     
+    <Item201>0x09,0x000E,Queue14</Item201> 
+    <Item202>0x09,0x000F,Queue15</Item202> 
+    <Item203>0x09,0x0010,Queue16</Item203>        
+    <Item204>0x0A,0x0001,Left Button</Item204> 
+    <Item205>0x0A,0x0002,Right Button</Item205> 
+    <Item206>0x0A,0x0004,Middle Button</Item206> 
+    <Item207>0x0A,0x0010,Forward</Item207> 
+    <Item208>0x0A,0x0008,Back</Item208> 
+    <Item209>0x05,0x002B,Light mode cycle-</Item209>
+    <Item210>0x06,0x02,MacFn</Item210> 
+  </KeyFunction> 
+
+  <Other>
+    <Default>Default:</Default>
+    <Disable>Disable</Disable>
+    <Macro>Macro-</Macro>   
+    <MacroStart>Start Macro</MacroStart>
+    <MacroStop>Stop Macro</MacroStop>
+    <ms>ms</ms>    
+    <Action>Action:</Action>  
+    <CycleTimes>Cycle %d times</CycleTimes>
+    <UntilThisPre>Cycle until this key pressed</UntilThisPre>
+    <UntilPres>Cycle until any key pressed</UntilPres>
+    <UntilRels>Cycle until this key released</UntilRels>    
+    <LeftShift>Move Left</LeftShift>
+    <RightShift>Move Right</RightShift>
+    <MoveUp>Move Up</MoveUp>
+    <MoveDown>Move Down</MoveDown>
+  </Other> 
+  <Tips>
+    <NoMacro>No macros are currently available, please create them first</NoMacro>
+    <MaxMacro>A maximum of 15 macros are supported. If you need to replace them, delete unused macros first</MaxMacro>    
+    <CycleTimesError>Cycle times range:1-250</CycleTimesError>   
+    <MultiPairDevice>Multiple receivers found, please only retain the receiver which needs to be operated on</MultiPairDevice>
+    <NoPairDevice>No operable receiver has been found currently. Please confirm if the receiver has been inserted</NoPairDevice>
+    <CantPair>Pairing is permissible only in wireless mode</CantPair>
+    <OnlyWired>The keyboard can only be paired in wireless mode</OnlyWired> 
+    <Offline>Please wake up or power on your device</Offline> 
+  </Tips> 
+
+  <Pair>
+    <Start>Start</Start>
+    <Pairing>Pairing</Pairing>
+    <Success>Pair Success</Success>
+    <Fail>Pair Fail</Fail>
+    <Retry>Retry</Retry>  
+  </Pair> 
+
+
+  <Update>
+    <Check>Check Update</Check>
+    <Checking>Checking</Checking>
+    <LatestVersion>up-to-date</LatestVersion>
+    <Updating>Device Updating，Please don't unplug</Updating>
+    <Success>Update Success</Success>
+    <Fail>Update Fail</Fail>
+    <Ready>Click the "Update" button to start the update</Ready>
+    <Empty>To start upgrading,please unplug the dongle then connect the keyboard in wired mode.</Empty>
+    <Multi>Multiple receivers or devices have been found. Reserve the receiver or device that need to be update</Multi>
+    <UpdateButton>Update</UpdateButton>
+    <UpdateCancel>Cancel</UpdateCancel>
+    <UpdateCertain>Confirm</UpdateCertain>
+    <UpdateNoDongle>Only the keyboard can be upgraded by this firmware!please unplug the receiver before continue.</UpdateNoDongle>
+    <Auto>New keyboard firmware found, continue to upgrade?</Auto>
+  </Update> 
+
+  <Dialog>
+    <NoResources>No Resources Files</NoResources>
+    <ErrorDriveConfig>Drive Config Error or No Exist</ErrorDriveConfig>
+    <ProgramRuning>The program is running</ProgramRuning>
+    <DeviceConnecting>Please wait. The current lighting mode is on reading......</DeviceConnecting>
+    <ConnectTimeout>Timeout，Please click device</ConnectTimeout>
+    <NoDevice>No operable device is detected</NoDevice>
+    <ConnectDevice>Please connect your game device</ConnectDevice>
+    <ComboKey>至少选择一个控制键和普通键</ComboKey>
+    <ErrorMacroFile>Import File Is Error</ErrorMacroFile>
+    <CreateMacro>Create a macro first</CreateMacro>
+    <SameMacro>This name is already used</SameMacro>
+    <InputName>Please enter a name</InputName>
+    <SelectMacro>Please select a macro</SelectMacro>
+    <StopMacro>Please stop recording macro first</StopMacro>
+    <InputKey>Please enter a key</InputKey>
+    <Delete>Are you sure you want to delete？</Delete>
+    <MaxMacroKey>Macro Key reached the Max limit</MaxMacroKey>
+    <InputDelay>Please enter delay time（ms）</InputDelay>
+    <InputComboKey>Please enter a single key or combination key</InputComboKey>
+    <ReserveLeftKey>The left key must be retained</ReserveLeftKey>
+    <Restore>Are you sure you want to restore?</Restore>
+    <ImportConfig>Please wait a moment，Importing config</ImportConfig>
+    <ErrorConfig>Importing config Error</ErrorConfig>
+    <ErrorDevice>Importing config does not match the device</ErrorDevice>
+    <MultiDevice>There are multiple identical devices, keep the device that needs to be operated</MultiDevice>
+    <Offline>Device offline，please wake up or power on your device</Offline>
+    <SelectKey>Please select a key first</SelectKey>
+    <DefaultDelayMin>The default delay is no less than 10</DefaultDelayMin>
+    <DevNewVerTips>Please upgrade the device and receiver to the latest firmware at the same time, after all the upgrades are successful, please pair before use!</DevNewVerTips>
+    <DongleIsNewTips>Found device new firmware, please update in wired!</DongleIsNewTips>
+    <MouseIsNewTips>Found recevier new firmware, update now？</MouseIsNewTips>
+    <FirmwareNewTips>Found new firmware，please update！</FirmwareNewTips>
+    <OnlyWireless>Please make sure to set the device to wireless mode before proceeding.</OnlyWireless>
+    <ChangeConfig>Whether to switch configuration?</ChangeConfig>
+    <Confirm>Confirm</Confirm>
+  </Dialog>
+</ToTal>

@@ -1,0 +1,554 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Total>
+  <Control>
+    <lbl_StayOffTime>放停後燈光關閉時間</lbl_StayOffTime>
+    <lbl_B>B:</lbl_B>
+    <lbl_G>G:</lbl_G>
+    <lbl_R>R:</lbl_R>
+    <lbl_Preset>預設顏色</lbl_Preset>
+    <lbl_Preview>顏色預覽</lbl_Preview>
+    <lbl_LEDColor>燈光顏色</lbl_LEDColor>
+    <lbl_Speed>速度</lbl_Speed>
+    <lbl_Brightness>亮度</lbl_Brightness>
+    <lbl_MusicTips>灯光将跟随系统声音的节奏动态调整</lbl_MusicTips>
+    <lbl_Smooth>律动平滑</lbl_Smooth>
+    <lbl_Amp>律动幅度</lbl_Amp>
+    <lbl_LightDirection>灯光方向</lbl_LightDirection>
+    <lbl_DriveVer>驱动版本：1.1.1.1</lbl_DriveVer>
+    <lbl_Lan>语言</lbl_Lan>
+    <lbl_DeviceInfo>设备信息</lbl_DeviceInfo>
+    <lbl_DongleVer>接收器固件版本</lbl_DongleVer>   
+    <lbl_KBVer>键盘固件版本</lbl_KBVer>
+    <lbl_PairTool>配对工具</lbl_PairTool>
+    <lbl_ReportRate>回報率</lbl_ReportRate>  
+    <lbl_Restore>恢复出厂设置</lbl_Restore>
+    <lbl_Other>其他</lbl_Other>   
+    <lbl_CloseWin>關閉主窗口</lbl_CloseWin>   
+
+    <lbl_ConDev>请接入你的装备</lbl_ConDev>
+    <lbl_ClickEnter>請先連接設備，點擊開啟使用.</lbl_ClickEnter>
+    <lbl_PairTips>請操作鍵盤進入配對狀態（先切至無線擋位，同時按Fn+4組合鍵長按3S，直至信號燈藍燈慢閃），並靠近接收器點擊「開始配對」或按鍵盤的空格鍵</lbl_PairTips> 
+    <lbl_NewVerTips>请务必同时将设备和接收器插入电脑，进行固件升级 ！ 若升级成功后不能使用，请进行配对后再使用！</lbl_NewVerTips>
+    <lbl_UpdateTips>升级设备时,请在有线连接模式下进行；确保连接设备正常，并在升级过程中不要拔插设备.</lbl_UpdateTips>
+
+    <rd_sys_Win>Win</rd_sys_Win>
+    <rd_sys_Mac>Mac</rd_sys_Mac>
+    <rd_sys_iOS>iOS</rd_sys_iOS>
+    <rd_sys_Android>Android</rd_sys_Android>
+
+    <rd_fn_Default>Default</rd_fn_Default>
+    <rd_fn_Fn1>Fn</rd_fn_Fn1>
+    <rd_fn_Fn2>Fn2</rd_fn_Fn2>
+
+    <rd_Key_KB>单键</rd_Key_KB>
+    <rd_Key_Combo>组合键</rd_Key_Combo>
+    <rd_Key_Media>多媒体</rd_Key_Media>
+    <rd_Key_Macro>宏使用</rd_Key_Macro>
+    <rd_Key_Other>其他</rd_Key_Other>
+    <rd_Key_Forbid>禁用键</rd_Key_Forbid>
+
+    <btn_Disable>禁用</btn_Disable>
+    <btn_Enable>启用</btn_Enable>
+
+    <rd_LightMode>燈光模式</rd_LightMode>
+    <rd_CustomMode>自定义灯光</rd_CustomMode>
+
+    <rd_Light1>關閉燈光</rd_Light1>
+    <rd_Light2>涟漪点点</rd_Light2>  
+    <rd_Light3>一触即发</rd_Light3>
+    <rd_Light4>川流不息</rd_Light4> 
+    <rd_Light5>踏雪无痕</rd_Light5>
+    <rd_Light6>正弦光波</rd_Light6> 
+    <rd_Light7>    呼吸  </rd_Light7>
+    <rd_Light8>    恒亮  </rd_Light8> 
+    <rd_Light9>  贪吃蛇 </rd_Light9>
+    <rd_Light10>花开四季</rd_Light10> 
+    <rd_Light11>關閉燈光</rd_Light11>
+    <rd_Light12>七彩变幻</rd_Light12>  
+
+    <rd_CusLight1>    關閉  </rd_CusLight1>
+    <rd_CusLight2>    呼吸  </rd_CusLight2>
+    <rd_CusLight3>    恒亮  </rd_CusLight3>  
+    <rd_CusLight4>  跑马灯 </rd_CusLight4>
+    <rd_CusLight5>    流光  </rd_CusLight5> 
+
+    <rd_LTR>由左至右</rd_LTR>
+    <rd_RTL>由右至左</rd_RTL>
+
+    <lbl_KeyList>按键列表</lbl_KeyList>
+    <lbl_MacroList>宏列表</lbl_MacroList>
+    <rd_AutoDelay>自动插入延时</rd_AutoDelay>
+    <rd_DefaultDelay>默认延时</rd_DefaultDelay>
+    <rd_UntilRels>循环直到此按键松开</rd_UntilRels>
+    <rd_UntilPres>循环直到任意键按下</rd_UntilPres>   
+    <rd_UntilThisPre>循环直到此按键再按下</rd_UntilThisPre> 
+    <rd_CycleTimes>循环次数</rd_CycleTimes>
+    <lbl_InsertEvent>插入事件</lbl_InsertEvent>
+
+    <rd_Music1>    常规  </rd_Music1>
+    <rd_Music2>    摇滚  </rd_Music2>  
+    <rd_Music3>    激情  </rd_Music3>
+
+    <rd_rp_125Hz>125Hz</rd_rp_125Hz>
+    <rd_rp_250Hz>250Hz</rd_rp_250Hz>
+    <rd_rp_500Hz>500Hz</rd_rp_500Hz>
+    <rd_rp_1000Hz>1000Hz</rd_rp_1000Hz>
+
+    <rd_win_Exit>退出</rd_win_Exit>
+    <rd_win_Pallet>最小化到系统托盘</rd_win_Pallet>
+
+    <btn_EnableAll>启用所有按键</btn_EnableAll>
+    <btn_Pair>配对</btn_Pair>
+    <btn_Restore>恢复出厂设置</btn_Restore>  
+    <btn_DongleUpdate>检查升级</btn_DongleUpdate>   
+    <btn_KBUpdate>检查升级</btn_KBUpdate>    
+    <btn_DelKey>刪除</btn_DelKey>
+    <btn_ModKey>修改</btn_ModKey>
+    <btn_DelMacro>刪除</btn_DelMacro>
+    <btn_NewMacro>新建宏</btn_NewMacro>
+    <btn_SaveMacro>保存</btn_SaveMacro>
+    <btn_OK>确定</btn_OK>
+    <btn_Cancel>取消</btn_Cancel>
+
+    <btn_StartUpdate>开始更新</btn_StartUpdate>
+    <btn_StartPair>开始配对(Space)</btn_StartPair>
+    	
+    <ckb_Colorful>混彩</ckb_Colorful>	
+    <ckb_Bootstrap>开机自动启动</ckb_Bootstrap>
+    <ckb_SmartSpeed>Smart Speed X超低延迟</ckb_SmartSpeed>
+    <ckb_KeyNoPunch>切换为6键无冲</ckb_KeyNoPunch>
+    <ckb_ExchangeWASD>交换WASD（选择之后，将WASD和方向键交换）</ckb_ExchangeWASD>	
+
+    <MenuItem_OpenMenu>打開主介面</MenuItem_OpenMenu>
+    <MenuItem_Exit>退出程式</MenuItem_Exit>
+    <MenuItem_Modify>修改</MenuItem_Modify>
+    <MenuItem_DelKey>刪除</MenuItem_DelKey>
+    <MenuItem_Export>導出該宏</MenuItem_Export>
+    <MenuItem_Rename>重命名</MenuItem_Rename>
+    <MenuItem_DelMacro>刪除</MenuItem_DelMacro>
+    <MenuItem_NewMacro>新建宏</MenuItem_NewMacro>
+    <MenuItem_Import>導入宏</MenuItem_Import>
+    <Select_Macro>選擇宏命令</Select_Macro>
+    <ComName>Shenzhen Lofree Culture Co.,Ltd.</ComName>
+    <ComNet>https://www.lofree.co/</ComNet>
+    <LightDsr>驅動燈光僅供參考，實際已鍵盤為准</LightDsr>
+    <lbl_ClickEnter_2>(请先连接设备,点击开启使用.)</lbl_ClickEnter_2>
+  </Control>
+  <Description>
+    <btn_Restore>恢复出厂设置</btn_Restore>  
+    <btn_DongleUpdate>检查升级</btn_DongleUpdate>   
+    <btn_KBUpdate>检查升级</btn_KBUpdate>    
+    <btn_Export>导出配置</btn_Export>
+    <btn_Import>导入配置</btn_Import>
+    <btn_Edit>重命名</btn_Edit>
+    <btn_Del>删除</btn_Del>
+    <btn_New>新建配置</btn_New>
+    <btn_Reset>恢复默认</btn_Reset>
+
+    <rd_Light1>关闭灯光</rd_Light1>
+    <rd_Light2>涟漪点点</rd_Light2>  
+    <rd_Light3>一触即发</rd_Light3>
+    <rd_Light4>川流不息</rd_Light4> 
+    <rd_Light5>踏雪无痕</rd_Light5>
+    <rd_Light6>正玄光波</rd_Light6> 
+    <rd_Light7>    呼吸  </rd_Light7>
+    <rd_Light8>    恒亮  </rd_Light8> 
+    <rd_Light9>  贪吃蛇 </rd_Light9>
+    <rd_Light10>花开四季</rd_Light10> 
+    <rd_Light11>关闭灯光</rd_Light11>
+    <rd_Light12>七彩变幻</rd_Light12>  
+
+    <rd_Media1>亮度+</rd_Media1>
+    <rd_Media2>亮度-</rd_Media2>  
+    <rd_Media3>静音</rd_Media3>
+    <rd_Media4>音量+</rd_Media4> 
+    <rd_Media5>音量-</rd_Media5>
+    <rd_Media6>播放/暂停</rd_Media6> 
+    <rd_Media7>上一曲</rd_Media7>
+    <rd_Media8>下一曲</rd_Media8> 
+    <rd_Media9>停止播放</rd_Media9>
+    <rd_Media10>播放器</rd_Media10> 
+    <rd_Media11>邮件</rd_Media11>
+    <rd_Media12>我的电脑</rd_Media12>  
+    <rd_Media13>计算器</rd_Media13>
+    <rd_Media14>主页</rd_Media14> 
+    <rd_Media15>搜索</rd_Media15>
+    <rd_Media16>收藏夹</rd_Media16> 
+    <rd_Media17>网页前进</rd_Media17>
+    <rd_Media18>网页后退</rd_Media18> 
+    <rd_Media19>停止网页</rd_Media19>
+    <rd_Media20>网页刷新</rd_Media20>     
+    <rd_Media21>左键</rd_Media21>
+    <rd_Media22>右键</rd_Media22> 
+    <rd_Media23>中键</rd_Media23>
+    <rd_Media24>前进键</rd_Media24> 
+    <rd_Media25>后退键</rd_Media25>
+
+    <rd_AutoDelay>自动插入延时</rd_AutoDelay>
+    <rd_DefaultDelay>默认延时</rd_DefaultDelay>
+    <rd_CycleTimes>循环次数</rd_CycleTimes>
+    <rd_UntilThisPre>循环至此按键按下</rd_UntilThisPre>
+    <rd_UntilPres>循环直到任意键按下</rd_UntilPres>
+    <rd_UntilRels>循环直到按键松开</rd_UntilRels>
+    
+    <rd_rp_125Hz>125Hz</rd_rp_125Hz>
+    <rd_rp_250Hz>250Hz</rd_rp_250Hz>
+    <rd_rp_500Hz>500Hz</rd_rp_500Hz>
+    <rd_rp_1000Hz>1000Hz</rd_rp_1000Hz>	
+    <rd_LTR>由左至右</rd_LTR>
+    <rd_RTL>由右至左</rd_RTL>
+    
+    <rd_Key_KB>单键</rd_Key_KB>
+    <rd_Key_Combo>组合键</rd_Key_Combo>
+    <rd_Key_Media>多媒体</rd_Key_Media>
+    <rd_Key_Macro>宏使用</rd_Key_Macro>
+    <rd_Key_Other>其他</rd_Key_Other>
+    <rd_Key_Forbid>禁用键</rd_Key_Forbid>
+
+    <rd_LightMode>灯光模式</rd_LightMode>
+    <rd_CustomMode>自定义灯光</rd_CustomMode>
+	
+    <ckb_Colorful>混彩</ckb_Colorful>	
+    <ckb_Bootstrap>开机自动启动</ckb_Bootstrap>
+    <ckb_SmartSpeed>Smart Speed X超低延迟</ckb_SmartSpeed>
+    <ckb_KeyNoPunch>切换为6键无冲</ckb_KeyNoPunch>
+    <ckb_ExchangeWASD>交换WASD（选择之后，将WASD和方向键交换）</ckb_ExchangeWASD>
+
+    <MenuItem_OpenMenu>打開主介面</MenuItem_OpenMenu>
+    <MenuItem_Exit>退出程式</MenuItem_Exit>
+    <MenuItem_Modify>修改</MenuItem_Modify>
+    <MenuItem_DelKey>刪除</MenuItem_DelKey>
+    <MenuItem_Export>導出該宏</MenuItem_Export>
+    <MenuItem_Rename>重命名</MenuItem_Rename>
+    <MenuItem_DelMacro>刪除</MenuItem_DelMacro>
+    <MenuItem_NewMacro>新建宏</MenuItem_NewMacro>
+    <MenuItem_Import>導入宏</MenuItem_Import>
+  </Description>
+  <ComboBox>
+    <Item1>按鍵按下</Item1>
+    <Item2>按鍵釋放</Item2>
+    <Item3>延時</Item3>
+    <Item4>左鍵</Item4>
+    <Item5>右鍵</Item5>
+    <Item6>中鍵</Item6>
+    <Item7>前進键</Item7>
+    <Item8>後退键</Item8>
+    <Item9>10秒</Item9>
+    <Item10>30秒</Item10>
+    <Item11>1分鐘</Item11>
+    <Item12>3分鐘</Item12>
+    <Item13>5分鐘</Item13>
+    <Item14>10分鐘</Item14>
+    <Item15>15分鐘</Item15>
+    <Item16>20分鐘</Item16>
+    <Item17>25分鐘</Item17>
+    <Item18>30分鐘</Item18>
+    <Item19>35分鐘</Item19>
+    <Item20>40分鐘</Item20>
+  </ComboBox>
+
+  <KeyFunction>
+    <Item1>0x00,0x0000,禁用</Item1> 
+    <Item2>0x01,0x02,LShift</Item2> 
+    <Item3>0x01,0x20,RShift</Item3> 
+    <Item4>0x01,0x01,LCtrl</Item4> 
+    <Item5>0x01,0x08,LWin</Item5> 
+    <Item6>0x01,0x04,LAlt</Item6> 
+    <Item7>0x01,0x40,RAlt</Item7> 
+    <Item8>0x01,0x80,RWin</Item8> 
+    <Item9>0x01,0x10,RCtrl</Item9> 
+    <Item10>0x02,0x35,`</Item10> 
+    <Item11>0x02,0x2D,-</Item11> 
+    <Item12>0x02,0x2E,=</Item12> 
+    <Item13>0x02,0x2A,←</Item13> 
+    <Item14>0x02,0x2F,[</Item14> 
+    <Item15>0x02,0x30,]</Item15> 
+    <Item16>0x02,0x31,\</Item16> 
+    <Item17>0x02,0x33,;</Item17> 
+    <Item18>0x02,0x34,'</Item18> 
+    <Item19>0x02,0x36,,</Item19> 
+    <Item20>0x02,0x37,.</Item20> 
+    <Item21>0x02,0x38,/</Item21> 
+    <Item22>0x02,0x54,Num/</Item22> 
+    <Item23>0x02,0x55,Num*</Item23> 
+    <Item24>0x02,0x56,Num-</Item24> 
+    <Item25>0x02,0x57,Num+</Item25> 
+    <Item26>0x02,0x63,Num.</Item26> 
+    <Item27>0x02,0x87,K56 -\\ろ</Item27> 
+    <Item28>0x02,0x88,Roma 力夕力ナ</Item28> 
+    <Item29>0x02,0x89,K14 |    ¥</Item29> 
+    <Item30>0x02,0x67,=</Item30> 
+    <Item31>0x02,0x8B,K131 無変換</Item31> 
+    <Item32>0x02,0x8A,K132 変換</Item32> 
+    <Item33>0x02,0x91,K150 한사</Item33> 
+    <Item34>0x02,0x90,K151 한/영 かな</Item34> 
+    <Item35>0x02,0x29,Esc</Item35> 
+    <Item36>0x02,0x3A,F1</Item36> 
+    <Item37>0x02,0x3B,F2</Item37> 
+    <Item38>0x02,0x3C,F3</Item38> 
+    <Item39>0x02,0x3D,F4</Item39> 
+    <Item40>0x02,0x3E,F5</Item40> 
+    <Item41>0x02,0x3F,F6</Item41> 
+    <Item42>0x02,0x40,F7</Item42> 
+    <Item43>0x02,0x41,F8</Item43> 
+    <Item44>0x02,0x42,F9</Item44> 
+    <Item45>0x02,0x43,F10</Item45> 
+    <Item46>0x02,0x44,F11</Item46> 
+    <Item47>0x02,0x45,F12</Item47> 
+    <Item48>0x02,0x1E,1</Item48> 
+    <Item49>0x02,0x1F,2</Item49> 
+    <Item50>0x02,0x20,3</Item50> 
+    <Item51>0x02,0x21,4</Item51> 
+    <Item52>0x02,0x22,5</Item52> 
+    <Item53>0x02,0x23,6</Item53> 
+    <Item54>0x02,0x24,7</Item54> 
+    <Item55>0x02,0x25,8</Item55> 
+    <Item56>0x02,0x26,9</Item56> 
+    <Item57>0x02,0x27,0</Item57> 
+    <Item58>0x02,0x2B,Tab</Item58> 
+    <Item59>0x02,0x14,Q</Item59> 
+    <Item60>0x02,0x1A,W</Item60> 
+    <Item61>0x02,0x08,E</Item61> 
+    <Item62>0x02,0x15,R</Item62> 
+    <Item63>0x02,0x17,T</Item63> 
+    <Item64>0x02,0x1C,Y</Item64> 
+    <Item65>0x02,0x18,U</Item65> 
+    <Item66>0x02,0x0C,I</Item66> 
+    <Item67>0x02,0x12,O</Item67> 
+    <Item68>0x02,0x13,P</Item68> 
+    <Item69>0x02,0x39,CapsLock</Item69> 
+    <Item70>0x02,0x04,A</Item70> 
+    <Item71>0x02,0x16,S</Item71> 
+    <Item72>0x02,0x07,D</Item72> 
+    <Item73>0x02,0x09,F</Item73> 
+    <Item74>0x02,0x0A,G</Item74> 
+    <Item75>0x02,0x0B,H</Item75> 
+    <Item76>0x02,0x0D,J</Item76> 
+    <Item77>0x02,0x0E,K</Item77> 
+    <Item78>0x02,0x0F,L</Item78> 
+    <Item79>0x02,0x28,Enter</Item79> 
+    <Item80>0x02,0x1D,Z</Item80> 
+    <Item81>0x02,0x1B,X</Item81> 
+    <Item82>0x02,0x06,C</Item82> 
+    <Item83>0x02,0x19,V</Item83> 
+    <Item84>0x02,0x05,B</Item84> 
+    <Item85>0x02,0x11,N</Item85> 
+    <Item86>0x02,0x10,M</Item86> 
+    <Item87>0x02,0x2C,Space</Item87> 
+    <Item88>0x02,0x65,Apps</Item88> 
+    <Item89>0x02,0x46,Screen</Item89> 
+    <Item90>0x02,0x47,Scroll</Item90> 
+    <Item91>0x02,0x48,Pause</Item91> 
+    <Item92>0x02,0x49,Insert</Item92> 
+    <Item93>0x02,0x4A,Home</Item93> 
+    <Item94>0x02,0x4B,PageUp</Item94> 
+    <Item95>0x02,0x4C,Del</Item95> 
+    <Item96>0x02,0x4D,End</Item96> 
+    <Item97>0x02,0x4E,PageDn</Item97> 
+    <Item98>0x02,0x52,↑</Item98> 
+    <Item99>0x02,0x50,←</Item99> 
+    <Item100>0x02,0x51,↓</Item100> 
+    <Item101>0x02,0x4F,→</Item101> 
+    <Item102>0x02,0x53,NumLock</Item102> 
+    <Item103>0x02,0x5F,Num7</Item103> 
+    <Item104>0x02,0x60,Num8</Item104> 
+    <Item105>0x02,0x61,Num9</Item105> 
+    <Item106>0x02,0x5C,Num4</Item106> 
+    <Item107>0x02,0x5D,Num5</Item107> 
+    <Item108>0x02,0x5E,Num6</Item108> 
+    <Item109>0x02,0x59,Num1</Item109> 
+    <Item110>0x02,0x5A,Num2</Item110> 
+    <Item111>0x02,0x5B,Num3</Item111> 
+    <Item112>0x02,0x62,Num0</Item112> 
+    <Item113>0x02,0x58,Enter</Item113> 
+    <Item114>0x02,0x32,K42</Item114> 
+    <Item115>0x02,0x64,K45</Item115> 
+    <Item116>0x02,0x85,K107</Item116> 
+    <Item117>0x03,0x006F,屏幕亮度+</Item117>
+    <Item118>0x03,0x0070,屏幕亮度-</Item118>  
+    <Item119>0x03,0x0183,播放器</Item119>
+    <Item120>0x03,0x00CD,播放/暂停</Item120>
+    <Item121>0x03,0x00B5,下一曲</Item121>
+    <Item122>0x03,0x00B6,上一曲</Item122>
+    <Item123>0x03,0x00B7,停止播放</Item123>
+    <Item124>0x03,0x00E2,静音</Item124>
+    <Item125>0x03,0x00E9,音量+</Item125>
+    <Item126>0x03,0x00EA,音量-</Item126>
+    <Item127>0x03,0x018A,邮件</Item127>
+    <Item128>0x03,0x0192,计算器</Item128>
+    <Item129>0x03,0x0194,我的电脑</Item129>
+    <Item130>0x03,0x0223,主页</Item130>
+    <Item131>0x03,0x0221,搜索</Item131>
+    <Item132>0x03,0x0225,网页前进</Item132>
+    <Item133>0x03,0x0224,网页后退</Item133>
+    <Item134>0x03,0x0226,停止网页</Item134>
+    <Item135>0x03,0x0227,刷新</Item135>
+    <Item136>0x03,0x022A,收藏夹</Item136>    
+    <Item137>0x05,0x0000,蓝牙设备1</Item137>  
+    <Item138>0x05,0x0001,蓝牙设备2</Item138>
+    <Item139>0x05,0x0002,蓝牙设备3</Item139>
+    <Item140>0x05,0x0003,2.4G通道</Item140>
+    <Item141>0x05,0x0004,灯光模式循环加</Item141>
+    <Item142>0x05,0x0005,灯光模式加</Item142>
+    <Item143>0x05,0x0006,灯光模式减</Item143>
+    <Item144>0x05,0x0007,灯光颜色循环</Item144>
+    <Item145>0x05,0x0008,灯光颜色加</Item145>
+    <Item146>0x05,0x0009,灯光颜色减</Item146>
+    <Item147>0x05,0x000A, </Item147>
+    <Item148>0x05,0x000B,灯光速度循环</Item148>
+    <Item149>0x05,0x000C,灯光速度加</Item149>
+    <Item150>0x05,0x000D,灯光速度减</Item150>
+    <Item151>0x05,0x000E,灯光亮度循环</Item151>
+    <Item152>0x05,0x000F,灯光亮度加</Item152>
+    <Item153>0x05,0x0010,灯光亮度减</Item153>  
+    <Item154>0x05,0x0011,查看电量</Item154> 
+    <Item155>0x05,0x0012,灯光开关</Item155>  
+    <Item156>0x05,0x0013,FN Lock</Item156> 
+    <Item157>0x05,0x0014,蓝牙通道</Item157>  
+    <Item158>0x05,0x0015,有线通道</Item158> 
+    <Item159>0x05,0x0016,清除蓝牙记录</Item159>  
+    <Item160>0x05,0x0017,恢复初始化设置</Item160>   
+    <Item161>0x05,0x0018,windows系统</Item161>  
+    <Item162>0x05,0x0019,mac系统</Item162> 
+    <Item163>0x05,0x001A,android系统</Item163>  
+    <Item164>0x05,0x001B,iOS系统</Item164> 
+    <Item165>0x05,0x001C,禁用ALT+TAB键</Item165>  
+    <Item166>0x05,0x001D,禁用ALT+FN键</Item166> 
+    <Item167>0x05,0x001E,禁用SHIFT+TAB键</Item167>  
+    <Item168>0x05,0x001F,禁用WIN键</Item168> 
+    <Item169>0x05,0x0020,矩阵其他常亮灯</Item169>  
+    <Item170>0x05,0x0021,禁用WIN+APP键</Item170> 
+    <Item171>0x05,0x0022,全键盘锁键</Item171> 
+    <Item172>0x05,0x0023,Win系统的Copilot键</Item172> 
+    <Item173>0x05,0x0024,灯带模式开关</Item173>  
+    <Item174>0x05,0x0025,灯带模式循环</Item174> 
+    <Item175>0x05,0x0026,灯带模式加</Item175>  
+    <Item176>0x05,0x0027,灯带模式减</Item176>   
+    <Item177>0x05,0x0028,灯带亮度循环</Item177>  
+    <Item178>0x05,0x0029,灯带亮度加</Item178> 
+    <Item179>0x05,0x002A,灯带亮度减</Item179>  
+    <Item180>0x05,0x002B,灯带速度循环</Item180> 
+    <Item181>0x05,0x002C,灯带速度加</Item181>  
+    <Item182>0x05,0x002D,灯带速度减</Item182> 
+    <Item183>0x05,0x002E,灯带亮度循环</Item183>  
+    <Item184>0x05,0x002F,禁用WIN键</Item184> 
+    <Item185>0x05,0x0030,灯带亮度减</Item185> 
+    <Item186>0x06,0x01,FN</Item186> 
+    <Item187>0x06,0x03,FN2</Item187> 
+    <Item188>0x09,0x0001,序列键1</Item188>     
+    <Item189>0x09,0x0002,序列键2</Item189> 
+    <Item190>0x09,0x0003,序列键3</Item190>     
+    <Item191>0x09,0x0004,序列键4</Item191> 
+    <Item192>0x09,0x0005,序列键5</Item192>     
+    <Item193>0x09,0x0006,序列键6</Item193> 
+    <Item194>0x09,0x0007,序列键7</Item194>    
+    <Item195>0x09,0x0008,序列键8</Item195> 
+    <Item196>0x09,0x0009,序列键9</Item196>     
+    <Item197>0x09,0x000A,序列键10</Item197> 
+    <Item198>0x09,0x000B,序列键11</Item198>     
+    <Item199>0x09,0x000C,序列键12</Item199> 
+    <Item200>0x09,0x000D,序列键13</Item200>     
+    <Item201>0x09,0x000E,序列键14</Item201> 
+    <Item202>0x09,0x000F,序列键15</Item202> 
+    <Item203>0x09,0x0010,序列键16</Item203>        
+    <Item204>0x0A,0x0001,左键</Item204> 
+    <Item205>0x0A,0x0002,右键</Item205> 
+    <Item206>0x0A,0x0004,中键</Item206> 
+    <Item207>0x0A,0x0010,前进键</Item207> 
+    <Item208>0x0A,0x0008,后退键</Item208>    
+    <Item209>0x05,0x0031,灯效模式循环减</Item209>
+    <Item210>0x06,0x02,MacFn</Item210> 
+  
+  </KeyFunction> 
+
+  <Other>
+    <Default>默认:</Default>
+    <Disable>禁用</Disable>
+    <Macro>宏-</Macro>   
+    <MacroStart>開始錄製宏</MacroStart>
+    <MacroStop>停止錄製宏</MacroStop>
+    <ms>ms</ms>   
+    <Action>動作：</Action>
+    <CycleTimes>循环%d次</CycleTimes>
+    <UntilThisPre>循环至此按键按下</UntilThisPre>
+    <UntilPres>循环直到任意键按下</UntilPres>
+    <UntilRels>循环直到按键松开</UntilRels>  
+    <LeftShift>左移</LeftShift>
+    <RightShift>右移</RightShift>
+    <MoveUp>上移</MoveUp>
+    <MoveDown>下移</MoveDown>
+  </Other> 
+  <Tips>
+    <NoMacro>当前没有宏可用，请先创建</NoMacro>
+    <MaxMacro>最多支持15个宏，如果需要替换，请先删除不用的宏</MaxMacro>    
+    <CycleTimesError>循环次数范围为1-250</CycleTimesError>   
+    <MultiPairDevice>发现多个接收器，请只保留需要操作的接收器</MultiPairDevice>
+    <NoPairDevice>当前没有发现可以操作的接收器，请确认是否已插入接收器</NoPairDevice>
+    <CantPair>无线模式下，才能进入配对</CantPair>
+    <OnlyWired>鍵盤只有在無線模式下才能配對</OnlyWired> 
+    <Offline>请先唤醒设备或打开电源</Offline>
+  </Tips> 
+
+  <Pair>
+    <Start>开始配对</Start>
+    <Pairing>正在配对</Pairing>
+    <Success>配对成功</Success>
+    <Fail>配对失败</Fail>
+    <Retry>重试</Retry>  
+  </Pair> 
+
+  <Update>
+    <Check>检查更新</Check>
+    <Checking>正在检查</Checking>
+    <LatestVersion>当前是最新版本</LatestVersion>
+    <Updating>正在更新，请勿拔出设备：</Updating>
+    <Success>更新成功</Success>
+    <Fail>更新失败</Fail>
+    <Ready>点击“开始更新”按钮开始升级</Ready>
+    <Empty>请先拔掉dongle,用有线模式连接键盘,再开始升级</Empty>
+    <Multi>发现多个设备或接收器，请保留需要升级的</Multi>
+    <UpdateButton>升级</UpdateButton>
+    <UpdateCancel>取消</UpdateCancel>
+    <UpdateCertain>确认</UpdateCertain>
+    <UpdateNoDongle>新固件只能升级键盘,请先拔掉接收器.</UpdateNoDongle>
+    <Auto>發現鍵盤新固件,是否更新?</Auto>
+  </Update> 
+
+  <Dialog>
+    <NoResources>沒有圖片資源</NoResources>
+    <ErrorDriveConfig>驅動配置不存在或者錯誤</ErrorDriveConfig>
+    <ProgramRuning>程式處於運行狀態</ProgramRuning>
+    <DeviceConnecting>請稍等，正在更新設定</DeviceConnecting>
+    <ConnectTimeout>連接超時，請先移動滑鼠</ConnectTimeout>
+    <NoDevice>未檢測到可以操作的設備</NoDevice>
+    <ConnectDevice>請接入你的遊戲裝備</ConnectDevice>
+    <ComboKey>至少选择一个控制键和普通键</ComboKey>
+    <ErrorMacroFile>導入的宏檔案錯誤</ErrorMacroFile>
+    <CreateMacro>請先創建一個宏</CreateMacro>
+    <SameMacro>已經有一個同名的宏</SameMacro>
+    <InputName>請輸入名稱</InputName>
+    <SelectMacro>請先選擇一個宏</SelectMacro>
+    <StopMacro>請先停止宏錄製</StopMacro>
+    <InputKey>請輸入一個按鍵</InputKey>
+    <Delete>確定刪除？</Delete>
+    <MaxMacroKey>宏按鍵個數已達上限</MaxMacroKey>
+    <InputDelay>請輸入延遲時間</InputDelay>
+    <InputComboKey>請輸入單鍵或組合鍵</InputComboKey>
+    <ReserveLeftKey>左鍵必須保留</ReserveLeftKey>
+    <Restore>是否需要恢復默認設置</Restore>
+    <ImportConfig>請稍等，正在導入配置</ImportConfig>
+    <ErrorConfig>Importing config Error</ErrorConfig>
+    <ErrorDevice>Importing config does not match the device</ErrorDevice>
+    <MultiDevice>發現多個相同接收器，請只保留需要操作的接收器</MultiDevice>
+    <Offline>設備處於離線狀態，請先喚醒設備或打開電源</Offline>
+    <SelectKey>请先选择一个按键</SelectKey>
+    <DefaultDelayMin>默認延時不低於10</DefaultDelayMin>
+    <DevNewVerTips>請同時將滑鼠和接收器更新到最新固件；更新成功後，請先配對後在使用！</DevNewVerTips>
+    <DongleIsNewTips>滑鼠發現新固件，請先在有線模式下更新！</DongleIsNewTips>
+    <MouseIsNewTips>接收器發現新固件，是否現在更新？</MouseIsNewTips>
+    <FirmwareNewTips>發現新固件，請更新！</FirmwareNewTips>  
+    <OnlyWireless>請確保將設備設置為無線模式後再操作</OnlyWireless>
+    <ChangeConfig>是否需要切換配置?</ChangeConfig>
+    <Confirm>確定</Confirm>
+  </Dialog>
+<Total>

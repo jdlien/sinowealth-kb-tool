@@ -123,6 +123,7 @@ fn cli() -> Command {
                         .value_parser(value_parser!(usize))
                         .default_value(DEFAULT_RETRY_COUNT),
                 )
+                .arg(arg!(--bootloader_ready "skip jump-to-ISP; device is already in DFU"))
                 .device_args(),
         )
         .subcommand(
@@ -175,7 +176,7 @@ fn err_main() -> Result<(), CLIError> {
 
             let mut ds = DeviceSelector::new().map_err(CLIError::DeviceSelectorError)?;
             let device = ds
-                .try_fetch_isp_device(device_spec, retry_count)
+                .try_fetch_isp_device(device_spec, retry_count, false)
                 .map_err(CLIError::from)?;
             let firmware = device.read_cycle(section).map_err(CLIError::from)?;
 
@@ -202,6 +203,7 @@ fn err_main() -> Result<(), CLIError> {
                 .unwrap();
 
             let force = sub_matches.get_flag("force");
+            let bootloader_ready = sub_matches.get_flag("bootloader_ready");
 
             let format = get_format_from_matches(sub_matches, input_file, "format");
 
@@ -232,7 +234,7 @@ fn err_main() -> Result<(), CLIError> {
 
             let mut ds = DeviceSelector::new().map_err(CLIError::DeviceSelectorError)?;
             let device = ds
-                .try_fetch_isp_device(device_spec, retry_count)
+                .try_fetch_isp_device(device_spec, retry_count, bootloader_ready)
                 .map_err(CLIError::from)?;
             device.write_cycle(&mut firmware).map_err(CLIError::from)?;
 

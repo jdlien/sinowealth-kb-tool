@@ -1,0 +1,31 @@
+[package]
+name = "lofree-flow-lite-reference"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# CRC32 calculation for firmware validation
+crc32fast = "1.3"
+
+# HID device communication (when integrating with sinowealth-kb-tool)
+# hidapi = "1.5"
+
+# Error handling
+# anyhow = "1.0"
+
+# Binary data manipulation
+# byteorder = "1.4"
+
+# Serialization for configuration
+# serde = { version = "1.0", features = ["derive"] }
+
+[dev-dependencies]
+# Testing utilities if needed
+
+[[example]]
+name = "parse_firmware"
+path = "examples/parse_firmware.rs"
+
+[[example]] 
+name = "device_detection"
+path = "examples/device_detection.rs"

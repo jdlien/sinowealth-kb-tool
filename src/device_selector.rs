@@ -229,6 +229,13 @@ impl DeviceSelector {
             .clone()
             .into_iter()
             .filter(|d| {
+                // Special case for Lofree Flow Lite already in ISP mode
+                if device_spec.vendor_id == 0x3554 && device_spec.product_id == 0xf808 {
+                    return d.vendor_id() == device_spec.vendor_id
+                        && d.product_id() == device_spec.product_id
+                        && d.interface_number() == device_spec.isp_iface_num;
+                }
+                
                 d.vendor_id() == GAMING_KB_VENDOR_ID
                     && matches!(
                         d.product_id(),
@@ -245,6 +252,18 @@ impl DeviceSelector {
 
         #[cfg(any(target_os = "macos", target_os = "linux"))]
         return {
+            // Special handling for Lofree Flow Lite
+            if device_spec.vendor_id == 0x3554 && device_spec.product_id == 0xf808 {
+                if let Some(device) = isp_devices.first() {
+                    debug!("ISP device (Lofree): {}", device.info());
+                    let handle = self
+                        .api
+                        .open_path(device.path())
+                        .map_err(DeviceSelectorError::from)?;
+                    return Ok(ISPDevice::new(device_spec, handle));
+                }
+            }
+            
             let device = self.get_device_for_report_ids(
                 isp_devices.clone(),
                 &[REPORT_ID_ISP as u32, REPORT_ID_XFER as u32],
@@ -294,6 +313,13 @@ impl DeviceSelector {
 
         let mut cmd_device_info: Option<&DeviceInfo> = None;
         for d in filtered_devices {
+            // Special case for Lofree Flow Lite devices which don't have standard feature reports
+            if (device_spec.vendor_id == 0x3554 && device_spec.product_id == 0xf808) ||
+               (device_spec.vendor_id == 0x05ac && device_spec.product_id == 0x024f) {
+                cmd_device_info = Some(d);
+                break;
+            }
+            
             let ids = self
                 .get_feature_report_ids_from_path(d.path())
                 .map_err(|_| DeviceSelectorError::NotFound)?;
@@ -322,6 +348,13 @@ impl DeviceSelector {
         device: HidDevice,
         device_spec: DeviceSpec,
     ) -> Result<ISPDevice, DeviceSelectorError> {
+        // Special case for Lofree devices - use device directly without ISP mode switching
+        if (device_spec.vendor_id == 0x3554 && device_spec.product_id == 0xf808) ||
+           (device_spec.vendor_id == 0x05ac && device_spec.product_id == 0x024f) {
+            debug!("Lofree device detected - using device directly without ISP mode switch");
+            return Ok(ISPDevice::new(device_spec, device));
+        }
+        
         if let Err(err) = self.enter_isp_mode(&device) {
             debug!("Error: {:}", err);
             match err {
@@ -351,6 +384,7 @@ impl DeviceSelector {
         &mut self,
         device_spec: DeviceSpec,
         retries: usize,
+        bootloader_ready: bool,
     ) -> Result<ISPDevice, DeviceSelectorError> {
         eprintln!(
             "Looking for {:04x}:{:04x} (isp_iface_num={} isp_report_id={})",
@@ -372,24 +406,26 @@ impl DeviceSelector {
                 thread::sleep(time::Duration::from_millis(1000));
             }
 
-            match self.find_device(device_spec) {
-                Ok(device) => {
-                    bar.set_message("Device found. Switching to ISP mode...");
-                    match self.switch_to_isp_device(device, device_spec) {
-                        Ok(isp_device) => {
-                            bar.finish_and_clear();
-                            eprintln!("Connected!");
-                            return Ok(isp_device);
-                        }
-                        Err(DeviceSelectorError::NotFound) => {}
-                        Err(err) => {
-                            return Err(err);
+            if !bootloader_ready {
+                match self.find_device(device_spec) {
+                    Ok(device) => {
+                        bar.set_message("Device found. Switching to ISP mode...");
+                        match self.switch_to_isp_device(device, device_spec) {
+                            Ok(isp_device) => {
+                                bar.finish_and_clear();
+                                eprintln!("Connected!");
+                                return Ok(isp_device);
+                            }
+                            Err(DeviceSelectorError::NotFound) => {}
+                            Err(err) => {
+                                return Err(err);
+                            }
                         }
                     }
-                }
-                Err(DeviceSelectorError::NotFound) => {}
-                Err(err) => {
-                    return Err(err);
+                    Err(DeviceSelectorError::NotFound) => {}
+                    Err(err) => {
+                        return Err(err);
+                    }
                 }
             }
 

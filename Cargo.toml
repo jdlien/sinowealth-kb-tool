@@ -9,6 +9,50 @@ edition = "2021"
 license = "MIT"
 rust-version = "1.65"
 
+[[bin]]
+name = "lofree-test"
+path = "src/lofree_test_tool.rs"
+
+[[bin]]
+name = "lofree-direct"
+path = "src/lofree_direct_test.rs"
+
+[[bin]]
+name = "flowlite-test"
+path = "flowlite_test.rs"
+
+[[bin]]
+name = "flowlite-debug"
+path = "flowlite_debug.rs"
+
+[[bin]]
+name = "flowlite-exit-test"
+path = "flowlite_exit_test.rs"
+
+[[bin]]
+name = "flowlite-exit-simple"
+path = "flowlite_exit_simple.rs"
+
+[[bin]]
+name = "flowlite-alt-exit"
+path = "flowlite_alt_exit.rs"
+
+[[bin]]
+name = "flowlite-write-test"
+path = "flowlite_write_test.rs"
+
+[[bin]]
+name = "test-mode-switch"
+path = "test_mode_switch.rs"
+
+[[bin]]
+name = "test-mode-switch-correct"
+path = "test_mode_switch_correct.rs"
+
+[[bin]]
+name = "test-bootloader-exit"
+path = "test_bootloader_exit.rs"
+
 [dependencies]
 clap = "4.1"
 clap-num = "1.0"

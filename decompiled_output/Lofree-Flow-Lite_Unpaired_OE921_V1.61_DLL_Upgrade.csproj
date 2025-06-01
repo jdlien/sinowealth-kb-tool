@@ -1,0 +1,95 @@
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <AssemblyName>USBUpdateTool</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <OutputType>WinExe</OutputType>
+    <UseWindowsForms>True</UseWindowsForms>
+    <TargetFramework>net48</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>12.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="costura64.hidusb.dll" />
+    <None Remove="costura64.usbfile.dll" />
+    <None Remove="costura64.msvcp140.dll" />
+    <None Remove="costura64.oleaut32.dll" />
+    <None Remove="costura64.vcruntime140.dll" />
+    <None Remove="costura64.vcruntime140_1.dll" />
+    <None Remove="costura32.hidusb32.dll" />
+    <None Remove="costura32.oleaut32.dll" />
+    <None Remove="costura32.usbfile32.dll" />
+    <None Remove="costura32.vcruntime140_1.dll" />
+    <None Remove="costura32.ucrtbased.dll" />
+    <None Remove="USBUpdateTool.MakeUpgradeTool.Files.Windows.Devices.winmd" />
+    <None Remove="USBUpdateTool.WindControls.IconFont.fontawesomewebfont.ttf" />
+    <None Remove="costura.costura.dll.compressed" />
+    <None Remove="costura.costura.pdb.compressed" />
+    <None Remove="costura.inthehand.net.personal.dll.compressed" />
+    <None Remove="costura.mono.cecil.dll.compressed" />
+    <None Remove="costura.system.diagnostics.diagnosticsource.dll.compressed" />
+    <None Remove="costura.metadata" />
+    <None Remove="USBUpdateTool.MakeUpgradeTool.Files.CompxUpgradeBinFile.bin" />
+    <None Remove="USBUpdateTool.MakeUpgradeTool.Files.LiteConfig.txt" />
+    <None Remove="USBUpdateTool.MakeUpgradeTool.Files.multiLogoIcon.ico" />
+    <None Remove="USBUpdateTool.MakeUpgradeTool.Files.UpgradeToolBackImage.png" />
+    <None Remove="USBUpdateTool.MakeUpgradeTool.Files.ButtonMouseUp.png" />
+    <None Remove="USBUpdateTool.MakeUpgradeTool.Files.ButtonMouseEnter.png" />
+    <None Remove="USBUpdateTool.MakeUpgradeTool.Files.ButtonMouseDown.png" />
+    <None Remove="USBUpdateTool.MakeUpgradeTool.Files.FailButtonMouseUp.png" />
+    <None Remove="USBUpdateTool.MakeUpgradeTool.Files.FailButtonMouseEnter.png" />
+    <None Remove="USBUpdateTool.MakeUpgradeTool.Files.FailButtonMouseDown.png" />
+    <None Remove="USBUpdateTool.MakeUpgradeTool.Files.ProgressSliderImage.png" />
+    <None Remove="USBUpdateTool.MakeUpgradeTool.Files.ProgressForeImage.png" />
+    <None Remove="USBUpdateTool.MakeUpgradeTool.Files.ProgressBackImage.png" />
+    <EmbeddedResource Include="costura64.hidusb.dll" LogicalName="costura64.hidusb.dll" />
+    <EmbeddedResource Include="costura64.usbfile.dll" LogicalName="costura64.usbfile.dll" />
+    <EmbeddedResource Include="costura64.msvcp140.dll" LogicalName="costura64.msvcp140.dll" />
+    <EmbeddedResource Include="costura64.oleaut32.dll" LogicalName="costura64.oleaut32.dll" />
+    <EmbeddedResource Include="costura64.vcruntime140.dll" LogicalName="costura64.vcruntime140.dll" />
+    <EmbeddedResource Include="costura64.vcruntime140_1.dll" LogicalName="costura64.vcruntime140_1.dll" />
+    <EmbeddedResource Include="costura32.hidusb32.dll" LogicalName="costura32.hidusb32.dll" />
+    <EmbeddedResource Include="costura32.oleaut32.dll" LogicalName="costura32.oleaut32.dll" />
+    <EmbeddedResource Include="costura32.usbfile32.dll" LogicalName="costura32.usbfile32.dll" />
+    <EmbeddedResource Include="costura32.vcruntime140_1.dll" LogicalName="costura32.vcruntime140_1.dll" />
+    <EmbeddedResource Include="costura32.ucrtbased.dll" LogicalName="costura32.ucrtbased.dll" />
+    <EmbeddedResource Include="USBUpdateTool.MakeUpgradeTool.Files.Windows.Devices.winmd" LogicalName="USBUpdateTool.MakeUpgradeTool.Files.Windows.Devices.winmd" />
+    <EmbeddedResource Include="USBUpdateTool.WindControls.IconFont.fontawesomewebfont.ttf" LogicalName="USBUpdateTool.WindControls.IconFont.fontawesomewebfont.ttf" />
+    <EmbeddedResource Include="costura.costura.dll.compressed" LogicalName="costura.costura.dll.compressed" />
+    <EmbeddedResource Include="costura.costura.pdb.compressed" LogicalName="costura.costura.pdb.compressed" />
+    <EmbeddedResource Include="costura.inthehand.net.personal.dll.compressed" LogicalName="costura.inthehand.net.personal.dll.compressed" />
+    <EmbeddedResource Include="costura.mono.cecil.dll.compressed" LogicalName="costura.mono.cecil.dll.compressed" />
+    <EmbeddedResource Include="costura.system.diagnostics.diagnosticsource.dll.compressed" LogicalName="costura.system.diagnostics.diagnosticsource.dll.compressed" />
+    <EmbeddedResource Include="costura.metadata" LogicalName="costura.metadata" />
+    <EmbeddedResource Include="USBUpdateTool.MakeUpgradeTool.Files.CompxUpgradeBinFile.bin" LogicalName="USBUpdateTool.MakeUpgradeTool.Files.CompxUpgradeBinFile.bin" />
+    <EmbeddedResource Include="USBUpdateTool.MakeUpgradeTool.Files.LiteConfig.txt" LogicalName="USBUpdateTool.MakeUpgradeTool.Files.LiteConfig.txt" />
+    <EmbeddedResource Include="USBUpdateTool.MakeUpgradeTool.Files.multiLogoIcon.ico" LogicalName="USBUpdateTool.MakeUpgradeTool.Files.multiLogoIcon.ico" />
+    <EmbeddedResource Include="USBUpdateTool.MakeUpgradeTool.Files.UpgradeToolBackImage.png" LogicalName="USBUpdateTool.MakeUpgradeTool.Files.UpgradeToolBackImage.png" />
+    <EmbeddedResource Include="USBUpdateTool.MakeUpgradeTool.Files.ButtonMouseUp.png" LogicalName="USBUpdateTool.MakeUpgradeTool.Files.ButtonMouseUp.png" />
+    <EmbeddedResource Include="USBUpdateTool.MakeUpgradeTool.Files.ButtonMouseEnter.png" LogicalName="USBUpdateTool.MakeUpgradeTool.Files.ButtonMouseEnter.png" />
+    <EmbeddedResource Include="USBUpdateTool.MakeUpgradeTool.Files.ButtonMouseDown.png" LogicalName="USBUpdateTool.MakeUpgradeTool.Files.ButtonMouseDown.png" />
+    <EmbeddedResource Include="USBUpdateTool.MakeUpgradeTool.Files.FailButtonMouseUp.png" LogicalName="USBUpdateTool.MakeUpgradeTool.Files.FailButtonMouseUp.png" />
+    <EmbeddedResource Include="USBUpdateTool.MakeUpgradeTool.Files.FailButtonMouseEnter.png" LogicalName="USBUpdateTool.MakeUpgradeTool.Files.FailButtonMouseEnter.png" />
+    <EmbeddedResource Include="USBUpdateTool.MakeUpgradeTool.Files.FailButtonMouseDown.png" LogicalName="USBUpdateTool.MakeUpgradeTool.Files.FailButtonMouseDown.png" />
+    <EmbeddedResource Include="USBUpdateTool.MakeUpgradeTool.Files.ProgressSliderImage.png" LogicalName="USBUpdateTool.MakeUpgradeTool.Files.ProgressSliderImage.png" />
+    <EmbeddedResource Include="USBUpdateTool.MakeUpgradeTool.Files.ProgressForeImage.png" LogicalName="USBUpdateTool.MakeUpgradeTool.Files.ProgressForeImage.png" />
+    <EmbeddedResource Include="USBUpdateTool.MakeUpgradeTool.Files.ProgressBackImage.png" LogicalName="USBUpdateTool.MakeUpgradeTool.Files.ProgressBackImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Windows.Devices" />
+    <Reference Include="InTheHand.Net.Personal" />
+    <Reference Include="Windows.Foundation" />
+    <Reference Include="Mono.Cecil" />
+    <Reference Include="System.Management" />
+    <Reference Include="Windows.Security" />
+    <Reference Include="Windows.Storage" />
+    <Reference Include="System.Core">
+      <HintPath>../../../../../opt/homebrew/Cellar/dotnet@8/8.0.16/libexec/shared/Microsoft.NETCore.App/8.0.16/System.Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

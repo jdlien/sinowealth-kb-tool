@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Total>
+  <Control>
+    <lbl_StayOffTime>消灯までの静止時間</lbl_StayOffTime>
+    <lbl_B>B:</lbl_B>
+    <lbl_G>G:</lbl_G>
+    <lbl_R>R:</lbl_R>
+    <lbl_Preset>プリセットカラー</lbl_Preset>
+    <lbl_Preview>プレビュー</lbl_Preview>
+    <lbl_LEDColor>ライトカラー </lbl_LEDColor>
+    <lbl_Speed>	スピード</lbl_Speed>
+    <lbl_Brightness>明るさ </lbl_Brightness>
+    <lbl_MusicTips>ライトはシステムの音に合わせてリズム動作します</lbl_MusicTips>
+    <lbl_Smooth>リズムスムーズ度</lbl_Smooth>
+    <lbl_Amp>リズムの強さ</lbl_Amp>
+    <lbl_LightDirection>ライトの方向</lbl_LightDirection>
+    <lbl_DriveVer>ドライバーバージョン：1.1.1.1</lbl_DriveVer>
+    <lbl_Lan>言語</lbl_Lan>
+    <lbl_DeviceInfo>デバイス情報</lbl_DeviceInfo>
+    <lbl_DongleVer>レシーバーファームウェアバージョン</lbl_DongleVer>
+    <lbl_KBVer>キーボードファームウェアバージョン</lbl_KBVer>
+    <lbl_PairTool>ペアリングツール</lbl_PairTool>
+    <lbl_ReportRate>ポーリングレート</lbl_ReportRate>
+    <lbl_Restore>出荷時設定にリセット</lbl_Restore>
+    <lbl_Other>その他</lbl_Other>
+    <lbl_CloseWin>メインウィンドウを閉じる</lbl_CloseWin>
+		
+    <lbl_ConDev>デバイスを接続してください</lbl_ConDev>
+    <lbl_ClickEnter>まずデバイスを接続し、「開始」をクリックして使用してください。	    </lbl_ClickEnter>
+    <lbl_PairTips>キーボードをペアリングモードにしてください（ワイヤレスモードに切り替えた後、Fn+4キーを同時に3秒間長押しし、インジケーターが青色でゆっくり点滅するまで）、その後レシーバーに近づけて「ペアリング開始」をクリックするか、キーボードのスペースキーを押してください。</lbl_PairTips>
+    <lbl_NewVerTips>ファームウェアのアップグレードを行うには、デバイスとレシーバーの両方をPCに接続してください！ アップグレード後に使用できない場合は、再度ペアリングを行ってからご使用ください！</lbl_NewVerTips>
+    <lbl_UpdateTips>デバイスをアップグレードする際は、有線接続モードで行ってください。接続が正常であることを確認し、アップグレード中はデバイスを抜き差ししないでください。</lbl_UpdateTips>
+		
+    <rd_sys_Win>Win</rd_sys_Win>
+    <rd_sys_Mac>Mac</rd_sys_Mac>
+    <rd_sys_iOS>iOS</rd_sys_iOS>
+    <rd_sys_Android>Android</rd_sys_Android>
+
+    <rd_fn_Default>Default</rd_fn_Default>
+    <rd_fn_Fn1>Fn</rd_fn_Fn1>
+    <rd_fn_Fn2>Fn2</rd_fn_Fn2>
+		
+    <rd_Key_KB>	単一キー </rd_Key_KB>
+    <rd_Key_Combo>コンビネーションキー</rd_Key_Combo>
+    <rd_Key_Media>マルチメディア </rd_Key_Media>
+    <rd_Key_Macro>マクロ使用</rd_Key_Macro>
+    <rd_Key_Other>その他</rd_Key_Other>
+    <rd_Key_Forbid>キー無効化</rd_Key_Forbid>
+		
+    <btn_Disable>無効化</btn_Disable>
+    <btn_Enable>有効化</btn_Enable>
+		
+    <rd_LightMode>ライティングモード </rd_LightMode>
+    <rd_CustomMode>カスタムライティング</rd_CustomMode>
+		
+    <rd_Light1>	ライトオフ </rd_Light1>
+    <rd_Light2>	さざ波</rd_Light2>
+    <rd_Light3>	タッチエフェクト</rd_Light3>
+    <rd_Light4>	フロー </rd_Light4>
+    <rd_Light5>	スノートレース</rd_Light5>
+    <rd_Light6>	サインウェーブ </rd_Light6>
+    <rd_Light7>	ブリージング </rd_Light7>
+    <rd_Light8>	常時点灯</rd_Light8>
+    <rd_Light9>	スネーク</rd_Light9>
+    <rd_Light10>シーズンブロッサム</rd_Light10>
+    <rd_Light11>レインボーサイクル</rd_Light11>
+    <rd_Light12>七色変化</rd_Light12>
+		
+    <rd_CusLight1>オフ</rd_CusLight1>
+    <rd_CusLight2>ブリージング</rd_CusLight2>
+    <rd_CusLight3>常時点灯</rd_CusLight3>
+    <rd_CusLight4>マーキー</rd_CusLight4>
+    <rd_CusLight5>ライトトレイル</rd_CusLight5>
+		
+    <rd_LTR>左から右へ</rd_LTR>
+    <rd_RTL>右から左へ</rd_RTL>
+		
+    <lbl_KeyList>キーリスト</lbl_KeyList>
+    <lbl_MacroList>マクロリスト</lbl_MacroList>
+    <rd_AutoDelay>自動遅延挿入</rd_AutoDelay>
+    <rd_DefaultDelay>デフォルト遅延</rd_DefaultDelay>
+    <rd_UntilRels>このキーが離されるまでループ</rd_UntilRels>
+    <rd_UntilPres>任意のキーが押されるまでループ</rd_UntilPres>
+    <rd_UntilThisPre>このキーが再度押されるまでループ</rd_UntilThisPre>
+    <rd_CycleTimes>ループ回数</rd_CycleTimes>
+    <lbl_InsertEvent>イベント挿入</lbl_InsertEvent>
+		
+    <rd_Music1>ノーマル </rd_Music1>
+    <rd_Music2>ロック</rd_Music2>
+    <rd_Music3>情熱</rd_Music3>
+		
+    <rd_rp_125Hz>125Hz</rd_rp_125Hz>
+    <rd_rp_250Hz>250Hz</rd_rp_250Hz>
+    <rd_rp_500Hz>500Hz</rd_rp_500Hz>
+    <rd_rp_1000Hz>1000Hz</rd_rp_1000Hz>
+		
+    <rd_win_Exit>終了</rd_win_Exit>
+    <rd_win_Pallet>システムトレイに最小化 </rd_win_Pallet>
+		
+    <btn_EnableAll>すべてのキーを有効にする</btn_EnableAll>
+    <btn_Pair>ペアリング</btn_Pair>
+    <btn_Restore>工場出荷時設定に戻す</btn_Restore>
+    <btn_DongleUpdate>アップデートを確認</btn_DongleUpdate>
+    <btn_KBUpdate>アップデートを確認</btn_KBUpdate>
+    <btn_DelKey>クリア</btn_DelKey>
+    <btn_ModKey>編集</btn_ModKey>
+    <btn_DelMacro>クリア</btn_DelMacro>
+    <btn_NewMacro>新しいマクロを作成</btn_NewMacro>
+    <btn_SaveMacro>保存</btn_SaveMacro>
+    <btn_OK>OK </btn_OK>
+    <btn_Cancel>キャンセル</btn_Cancel>
+		
+    <btn_StartUpdate>更新を開始</btn_StartUpdate>
+    <btn_StartPair>ペアリングを開始（Space）</btn_StartPair>
+    		    
+    <ckb_Colorful>混彩</ckb_Colorful>
+    <ckb_Bootstrap>起動時自動起動</ckb_Bootstrap>
+    <ckb_SmartSpeed>Smart Speed X超低遅延</ckb_SmartSpeed>
+    <ckb_KeyNoPunch>6キー無衝突に切り替え</ckb_KeyNoPunch>
+    <ckb_ExchangeWASD>WASD交換（選択後、WASDと方向キーを交換）</ckb_ExchangeWASD>
+		
+    <MenuItem_OpenMenu>メイン画面を開く</MenuItem_OpenMenu>
+    <MenuItem_Exit>プログラムを終了</MenuItem_Exit>
+    <MenuItem_Modify>編集</MenuItem_Modify>
+    <MenuItem_DelKey>クリア</MenuItem_DelKey>
+    <MenuItem_Export>このマクロをエクスポート</MenuItem_Export>
+    <MenuItem_Rename>名前を変更</MenuItem_Rename>
+    <MenuItem_DelMacro>クリア</MenuItem_DelMacro>
+    <MenuItem_NewMacro>新しいマクロ作成</MenuItem_NewMacro>
+    <MenuItem_Import>マクロをインポート</MenuItem_Import>
+    <Select_Macro>マクロコマンドを選択</Select_Macro>
+    <ComName>Shenzhen Lofree Culture Co.,Ltd.</ComName>
+    <ComNet>https://www.lofree.co/</ComNet>
+    <LightDsr>ドライバーのライト表示は参考用です。実際はキーボード本体の状態が優先されます。</LightDsr>
+    <lbl_ClickEnter_2>（先にデバイスを接続し、「使用開始」をクリックしてください。）</lbl_ClickEnter_2>
+  </Control>
+  <Description>
+    <btn_Restore>工場出荷時設定に戻す</btn_Restore>
+    <btn_DongleUpdate>アップデートを確認</btn_DongleUpdate>
+    <btn_KBUpdate>アップデートを確認</btn_KBUpdate>
+    <btn_Export>設定をエクスポート</btn_Export>
+    <btn_Import>設定をインポート</btn_Import>
+    <btn_Edit>名前を変更</btn_Edit>
+    <btn_Del>クリア</btn_Del>
+    <btn_New>新しい設定を作成</btn_New>
+    <btn_Reset>デフォルトに戻す</btn_Reset>
+		
+    <rd_Light1></rd_Light1>
+    <rd_Light2></rd_Light2>
+    <rd_Light3></rd_Light3>
+    <rd_Light4></rd_Light4>
+    <rd_Light5></rd_Light5>
+    <rd_Light6></rd_Light6>
+    <rd_Light7></rd_Light7>
+    <rd_Light8></rd_Light8>
+    <rd_Light9></rd_Light9>
+    <rd_Light10></rd_Light10>
+    <rd_Light11></rd_Light11>
+    <rd_Light12></rd_Light12>
+		
+    <rd_Media1>明るさ＋</rd_Media1>
+    <rd_Media2>明るさ－</rd_Media2>
+    <rd_Media3>消音</rd_Media3>
+    <rd_Media4>音量＋</rd_Media4>
+    <rd_Media5>音量－</rd_Media5>
+    <rd_Media6>再生/一時停止</rd_Media6>
+    <rd_Media7>前の曲</rd_Media7>
+    <rd_Media8>次の曲</rd_Media8>
+    <rd_Media9>停止</rd_Media9>
+    <rd_Media10>プレーヤー</rd_Media10>
+    <rd_Media11>メール</rd_Media11>
+    <rd_Media12>マイコンピュータ</rd_Media12>
+    <rd_Media13>電卓</rd_Media13>
+    <rd_Media14>ホーム</rd_Media14>
+    <rd_Media15>検索</rd_Media15>
+    <rd_Media16>お気に入り</rd_Media16>
+    <rd_Media17>進む</rd_Media17>
+    <rd_Media18>戻る</rd_Media18>
+    <rd_Media19>停止</rd_Media19>
+    <rd_Media20>更新</rd_Media20>
+    <rd_Media21>左クリック</rd_Media21>
+    <rd_Media22>右クリック</rd_Media22>
+    <rd_Media23>中央クリック</rd_Media23>
+    <rd_Media24>進むボタン</rd_Media24>
+    <rd_Media25>戻るボタン</rd_Media25>
+		
+    <rd_AutoDelay>自動遅延挿入</rd_AutoDelay>
+    <rd_DefaultDelay>デフォルト遅延</rd_DefaultDelay>
+    <rd_CycleTimes>ループ回数	    </rd_CycleTimes>
+    <rd_UntilThisPre>このキーが押されるまでループ</rd_UntilThisPre>
+    <rd_UntilPres>任意のキーが押されるまでループ</rd_UntilPres>
+    <rd_UntilRels>キーが離されるまでループ</rd_UntilRels>
+    		    
+    <rd_rp_125Hz>125Hz</rd_rp_125Hz>
+    <rd_rp_250Hz>250Hz</rd_rp_250Hz>
+    <rd_rp_500Hz>500Hz</rd_rp_500Hz>
+    <rd_rp_1000Hz>1000Hz</rd_rp_1000Hz>	
+    <rd_LTR>左から右へ</rd_LTR>
+    <rd_RTL>右から左へ</rd_RTL>
+    		
+    <rd_Key_KB>単一キー</rd_Key_KB>
+    <rd_Key_Combo>コンビネーションキー</rd_Key_Combo>
+    <rd_Key_Media>マルチメディア</rd_Key_Media>
+    <rd_Key_Macro>マクロ使用</rd_Key_Macro>
+    <rd_Key_Other>その他</rd_Key_Other>
+    <rd_Key_Forbid>キー無効化</rd_Key_Forbid>
+		
+    <rd_LightMode>ライティングモード</rd_LightMode>
+    <rd_CustomMode>カスタムライティング</rd_CustomMode>
+		
+    <ckb_Colorful>ミックスカラー</ckb_Colorful>
+    <ckb_Bootstrap>起動時自動起動</ckb_Bootstrap>
+    <ckb_SmartSpeed>Smart Speed X 超低遅延</ckb_SmartSpeed>
+    <ckb_KeyNoPunch>6キー同時押し無効に切替</ckb_KeyNoPunch>
+    <ckb_ExchangeWASD>WASD交換（選択するとWASDキーと矢印キーが入れ替わります）</ckb_ExchangeWASD>
+		
+    <MenuItem_OpenMenu>メイン画面を開く</MenuItem_OpenMenu>
+    <MenuItem_Exit>プログラムを終了</MenuItem_Exit>
+    <MenuItem_Modify>編集</MenuItem_Modify>
+    <MenuItem_DelKey>クリア</MenuItem_DelKey>
+    <MenuItem_Export>マクロをエクスポート</MenuItem_Export>
+    <MenuItem_Rename>名前を変更</MenuItem_Rename>
+    <MenuItem_DelMacro>クリア</MenuItem_DelMacro>
+    <MenuItem_NewMacro>新規マクロ作成</MenuItem_NewMacro>
+    <MenuItem_Import>マクロをインポート</MenuItem_Import>
+  </Description>	
+  <ComboBox>	
+    <Item1>プレス</Item1>
+    <Item2>リリース</Item2>
+    <Item3>遅延</Item3>
+    <Item4>左クリック</Item4>
+    <Item5>右クリック</Item5>
+    <Item6>ミドルクリック</Item6>
+    <Item7>進むキー</Item7>
+    <Item8>戻るキー</Item8>
+    <Item9>10秒</Item9>
+    <Item10>30秒</Item10>
+    <Item11>1分</Item11>
+    <Item12>3分</Item12>
+    <Item13>5分</Item13>
+    <Item14>10分</Item14>
+    <Item15>15分</Item15>
+    <Item16>20分</Item16>
+    <Item17>25分</Item17>
+    <Item18>30分</Item18>
+    <Item19>35分</Item19>
+    <Item20>40分</Item20>
+  </ComboBox>
+		
+  <KeyFunction>	
+    <Item1>0x00,0x0000,無効</Item1>
+    <Item2>0x01,0x02,LShift</Item2> 
+    <Item3>0x01,0x20,RShift</Item3> 
+    <Item4>0x01,0x01,LCtrl</Item4> 
+    <Item5>0x01,0x08,LWin</Item5> 
+    <Item6>0x01,0x04,LAlt</Item6> 
+    <Item7>0x01,0x40,RAlt</Item7> 
+    <Item8>0x01,0x80,RWin</Item8> 
+    <Item9>0x01,0x10,RCtrl</Item9> 
+    <Item10>0x02,0x35,`</Item10> 
+    <Item11>0x02,0x2D,-</Item11> 
+    <Item12>0x02,0x2E,=</Item12> 
+    <Item13>0x02,0x2A,←</Item13> 
+    <Item14>0x02,0x2F,[</Item14> 
+    <Item15>0x02,0x30,]</Item15> 
+    <Item16>0x02,0x31,\</Item16> 
+    <Item17>0x02,0x33,;</Item17> 
+    <Item18>0x02,0x34,'</Item18> 
+    <Item19>0x02,0x36,,</Item19> 
+    <Item20>0x02,0x37,.</Item20> 
+    <Item21>0x02,0x38,/</Item21> 
+    <Item22>0x02,0x54,Num/</Item22> 
+    <Item23>0x02,0x55,Num*</Item23> 
+    <Item24>0x02,0x56,Num-</Item24> 
+    <Item25>0x02,0x57,Num+</Item25> 
+    <Item26>0x02,0x63,Num.</Item26> 
+    <Item27>0x02,0x87,K56 -\\ろ</Item27> 
+    <Item28>0x02,0x88,Roma 力夕力ナ</Item28> 
+    <Item29>0x02,0x89,K14 |    ¥</Item29> 
+    <Item30>0x02,0x67,=</Item30> 
+    <Item31>0x02,0x8B,K131 無変換</Item31> 
+    <Item32>0x02,0x8A,K132 変換</Item32> 
+    <Item33>0x02,0x91,K150 한사</Item33> 
+    <Item34>0x02,0x90,K151 한/영 かな</Item34> 
+    <Item35>0x02,0x29,Esc</Item35> 
+    <Item36>0x02,0x3A,F1</Item36> 
+    <Item37>0x02,0x3B,F2</Item37> 
+    <Item38>0x02,0x3C,F3</Item38> 
+    <Item39>0x02,0x3D,F4</Item39> 
+    <Item40>0x02,0x3E,F5</Item40> 
+    <Item41>0x02,0x3F,F6</Item41> 
+    <Item42>0x02,0x40,F7</Item42> 
+    <Item43>0x02,0x41,F8</Item43> 
+    <Item44>0x02,0x42,F9</Item44> 
+    <Item45>0x02,0x43,F10</Item45> 
+    <Item46>0x02,0x44,F11</Item46> 
+    <Item47>0x02,0x45,F12</Item47> 
+    <Item48>0x02,0x1E,1</Item48> 
+    <Item49>0x02,0x1F,2</Item49> 
+    <Item50>0x02,0x20,3</Item50> 
+    <Item51>0x02,0x21,4</Item51> 
+    <Item52>0x02,0x22,5</Item52> 
+    <Item53>0x02,0x23,6</Item53> 
+    <Item54>0x02,0x24,7</Item54> 
+    <Item55>0x02,0x25,8</Item55> 
+    <Item56>0x02,0x26,9</Item56> 
+    <Item57>0x02,0x27,0</Item57> 
+    <Item58>0x02,0x2B,Tab</Item58> 
+    <Item59>0x02,0x14,Q</Item59> 
+    <Item60>0x02,0x1A,W</Item60> 
+    <Item61>0x02,0x08,E</Item61> 
+    <Item62>0x02,0x15,R</Item62> 
+    <Item63>0x02,0x17,T</Item63> 
+    <Item64>0x02,0x1C,Y</Item64> 
+    <Item65>0x02,0x18,U</Item65> 
+    <Item66>0x02,0x0C,I</Item66> 
+    <Item67>0x02,0x12,O</Item67> 
+    <Item68>0x02,0x13,P</Item68> 
+    <Item69>0x02,0x39,CapsLock</Item69> 
+    <Item70>0x02,0x04,A</Item70> 
+    <Item71>0x02,0x16,S</Item71> 
+    <Item72>0x02,0x07,D</Item72> 
+    <Item73>0x02,0x09,F</Item73> 
+    <Item74>0x02,0x0A,G</Item74> 
+    <Item75>0x02,0x0B,H</Item75> 
+    <Item76>0x02,0x0D,J</Item76> 
+    <Item77>0x02,0x0E,K</Item77> 
+    <Item78>0x02,0x0F,L</Item78> 
+    <Item79>0x02,0x28,Enter</Item79> 
+    <Item80>0x02,0x1D,Z</Item80> 
+    <Item81>0x02,0x1B,X</Item81> 
+    <Item82>0x02,0x06,C</Item82> 
+    <Item83>0x02,0x19,V</Item83> 
+    <Item84>0x02,0x05,B</Item84> 
+    <Item85>0x02,0x11,N</Item85> 
+    <Item86>0x02,0x10,M</Item86> 
+    <Item87>0x02,0x2C,Space</Item87> 
+    <Item88>0x02,0x65,Apps</Item88> 
+    <Item89>0x02,0x46,Screen</Item89> 
+    <Item90>0x02,0x47,Scroll</Item90> 
+    <Item91>0x02,0x48,Pause</Item91> 
+    <Item92>0x02,0x49,Insert</Item92> 
+    <Item93>0x02,0x4A,Home</Item93> 
+    <Item94>0x02,0x4B,PageUp</Item94> 
+    <Item95>0x02,0x4C,Del</Item95> 
+    <Item96>0x02,0x4D,End</Item96> 
+    <Item97>0x02,0x4E,PageDn</Item97> 
+    <Item98>0x02,0x52,↑</Item98> 
+    <Item99>0x02,0x50,←</Item99> 
+    <Item100>0x02,0x51,↓</Item100> 
+    <Item101>0x02,0x4F,→</Item101> 
+    <Item102>0x02,0x53,NumLock</Item102> 
+    <Item103>0x02,0x5F,Num7</Item103> 
+    <Item104>0x02,0x60,Num8</Item104> 
+    <Item105>0x02,0x61,Num9</Item105> 
+    <Item106>0x02,0x5C,Num4</Item106> 
+    <Item107>0x02,0x5D,Num5</Item107> 
+    <Item108>0x02,0x5E,Num6</Item108> 
+    <Item109>0x02,0x59,Num1</Item109> 
+    <Item110>0x02,0x5A,Num2</Item110> 
+    <Item111>0x02,0x5B,Num3</Item111> 
+    <Item112>0x02,0x62,Num0</Item112> 
+    <Item113>0x02,0x58,Enter</Item113> 
+    <Item114>0x02,0x32,K42</Item114> 
+    <Item115>0x02,0x64,K45</Item115> 
+    <Item116>0x02,0x85,K107</Item116> 
+    <Item117>0x03,0x006F,画面の明るさを上げる</Item117>
+    <Item118>0x03,0x0070,画面の明るさを下げる</Item118>
+    <Item119>0x03,0x0183,メディアプレーヤー</Item119>
+    <Item120>0x03,0x00CD,再生/一時停止</Item120>
+    <Item121>0x03,0x00B5,次の曲</Item121>
+    <Item122>0x03,0x00B6,前の曲</Item122>
+    <Item123>0x03,0x00B7,再生停止</Item123>
+    <Item124>0x03,0x00E2,ミュート</Item124>
+    <Item125>0x03,0x00E9,音量アップ</Item125>
+    <Item126>0x03,0x00EA,音量ダウン</Item126>
+    <Item127>0x03,0x018A,メール</Item127>
+    <Item128>0x03,0x0192,電卓</Item128>
+    <Item129>0x03,0x0194,マイコンピューター</Item129>
+    <Item130>0x03,0x0223,ホームページ</Item130>
+    <Item131>0x03,0x0221,検索</Item131>
+    <Item132>0x03,0x0225,進む</Item132>
+    <Item133>0x03,0x0224,戻る</Item133>
+    <Item134>0x03,0x0226,ページ停止</Item134>
+    <Item135>0x03,0x0227,更新</Item135>
+    <Item136>0x03,0x022A,お気に入り</Item136>
+    <Item137>0x05,0x0000,Bluetoothデバイス1</Item137>
+    <Item138>0x05,0x0001,Bluetoothデバイス2</Item138>
+    <Item139>0x05,0x0002,Bluetoothデバイス3</Item139>
+    <Item140>0x05,0x0003,2.4Gチャンネル</Item140>
+    <Item141>0x05,0x0004,ライティングモード順送り+</Item141>
+    <Item142>0x05,0x0005,ライティングモード+</Item142>
+    <Item143>0x05,0x0006,ライティングモード-</Item143>
+    <Item144>0x05,0x0007,ライティングカラー順送り</Item144>
+    <Item145>0x05,0x0008,ライティングカラー+ </Item145>
+    <Item146>0x05,0x0009,ライティングカラー- </Item146>
+    <Item147>0x05,0x000A, 	    </Item147>
+    <Item148>0x05,0x000B,ライティング速度順送り</Item148>
+    <Item149>0x05,0x000C,ライティング速度+</Item149>
+    <Item150>0x05,0x000D,ライティング速度-</Item150>
+    <Item151>0x05,0x000E,ライティング明るさ順送り</Item151>
+    <Item152>0x05,0x000F,ライティング明るさ+</Item152>
+    <Item153>0x05,0x0010,ライティング明るさ-</Item153>
+    <Item154>0x05,0x0011,バッテリー残量確認</Item154>
+    <Item155>0x05,0x0012,ライティングオン/オフ</Item155>
+    <Item156>0x05,0x0013,FNロック</Item156>
+    <Item157>0x05,0x0014,Bluetoothチャンネル</Item157>
+    <Item158>0x05,0x0015,有線チャンネル</Item158>
+    <Item159>0x05,0x0016,Bluetooth履歴クリア</Item159>
+    <Item160>0x05,0x0017,初期化設定に戻す</Item160>
+    <Item161>0x05,0x0018,Windowsシステム</Item161>
+    <Item162>0x05,0x0019,macOSシステム</Item162>
+    <Item163>0x05,0x001A,Androidシステム</Item163>
+    <Item164>0x05,0x001B,iOSシステム</Item164>
+    <Item165>0x05,0x001C,ALT+TABキー無効化</Item165>
+    <Item166>0x05,0x001D,ALT+FNキー無効化</Item166>
+    <Item167>0x05,0x001E,SHIFT+TABキー無効化</Item167>
+    <Item168>0x05,0x001F,WINキー無効化</Item168>
+    <Item169>0x05,0x0020,マトリックス常時点灯</Item169>
+    <Item170>0x05,0x0021,WIN+APPキー無効化</Item170>
+    <Item171>0x05,0x0022,全キー無効化</Item171>
+    <Item172>0x05,0x0023,WindowsのCopilotキー</Item172>
+    <Item173>0x05,0x0024,ライトバーオン/オフ</Item173>
+    <Item174>0x05,0x0025,ライトバーモード順送り</Item174>
+    <Item175>0x05,0x0026,ライトバーモード+ </Item175>
+    <Item176>0x05,0x0027,ライトバーモード-</Item176>
+    <Item177>0x05,0x0028,ライトバー明るさ順送り</Item177>
+    <Item178>0x05,0x0029,ライトバー明るさ+</Item178>
+    <Item179>0x05,0x002A,ライトバー明るさ-</Item179>
+    <Item180>0x05,0x002B,ライトバー速度順送り</Item180>
+    <Item181>0x05,0x002C,ライトバー速度+ </Item181>
+    <Item182>0x05,0x002D,ライトバー速度- </Item182>
+    <Item183>0x05,0x002E,ライトバー明るさ順送り</Item183>
+    <Item184>0x05,0x002F,WINキー無効化</Item184>
+    <Item185>0x05,0x0030,ライトバー明るさ-</Item185>
+    <Item186>0x06,0x01,FN</Item186>
+    <Item187>0x06,0x03,FN2</Item187>
+    <Item188>0x09,0x0001,シーケンスキー1</Item188>
+    <Item189>0x09,0x0002,シーケンスキー2</Item189>
+    <Item190>0x09,0x0003,シーケンスキー3</Item190>
+    <Item191>0x09,0x0004,シーケンスキー4</Item191>
+    <Item192>0x09,0x0005,シーケンスキー5</Item192>
+    <Item193>0x09,0x0006,シーケンスキー6</Item193>
+    <Item194>0x09,0x0007,シーケンスキー7</Item194>
+    <Item195>0x09,0x0008,シーケンスキー8</Item195>
+    <Item196>0x09,0x0009,シーケンスキー9</Item196>
+    <Item197>0x09,0x000A,シーケンスキー10</Item197>
+    <Item198>0x09,0x000B,シーケンスキー11</Item198>
+    <Item199>0x09,0x000C,シーケンスキー12</Item199>
+    <Item200>0x09,0x000D,シーケンスキー13</Item200>
+    <Item201>0x09,0x000E,シーケンスキー14</Item201>
+    <Item202>0x09,0x000F,シーケンスキー15</Item202>
+    <Item203>0x09,0x0010,シーケンスキー16</Item203>
+    <Item204>0x0A,0x0001,左クリック</Item204>
+    <Item205>0x0A,0x0002,右クリック</Item205>
+    <Item206>0x0A,0x0004,ミドルクリック</Item206>
+    <Item207>0x0A,0x0010,進むボタン</Item207>
+    <Item208>0x0A,0x0008,戻るボタン</Item208>
+    <Item209>0x05,0x0031,ライティングモード順戻し</Item209>
+    <Item210>0x06,0x02,MacFn</Item210>
+  </KeyFunction>
+		
+  <Other>
+    <Default>デフォルト:</Default>
+    <Disable>無効</Disable>
+    <Macro>マクロ－</Macro>
+    <MacroStart>マクロの録画開始</MacroStart>
+    <MacroStop>マクロの録画停止</MacroStop>
+    <ms>ms</ms>
+    <Action>動作:</Action>
+    <CycleTimes>%d回ループ</CycleTimes>
+    <UntilThisPre>このキーが押されるまでループ</UntilThisPre>
+    <UntilPres>任意のキーが押されるまでループ</UntilPres>
+    <UntilRels>キーが離されるまでループ</UntilRels>
+    <LeftShift>左へ移動</LeftShift>
+    <RightShift>右へ移動</RightShift>
+    <MoveUp>上へ移動</MoveUp>
+    <MoveDown>下へ移動</MoveDown>
+  </Other>
+  <Tips>
+    <NoMacro>現在使用可能なマクロはありません。まずマクロを作成してください。</NoMacro>
+    <MaxMacro>最大15個のマクロをサポートしています。置き換える場合は不要なマクロを削除してください。</MaxMacro>
+    <CycleTimesError>ループ回数の範囲は1～250です。</CycleTimesError>
+    <MultiPairDevice>複数の受信機が検出されました。操作したい受信機のみを残してください。</MultiPairDevice>
+    <NoPairDevice>操作可能な受信機が見つかりません。受信機が正しく接続されているか確認してください。</NoPairDevice>
+    <CantPair>ペアリングはワイヤレスモードのみで可能です。</CantPair>
+    <OnlyWired>キーボードはワイヤレスモードでのみペアリングできます。</OnlyWired>
+    <Offline>まずデバイスの電源を入れるか、スリープ状態を解除してください。</Offline>
+  </Tips>
+		
+  <Pair>
+    <Start>ペアリング開始</Start>
+    <Pairing>ペアリング中</Pairing>
+    <Success>ペアリング成功</Success>
+    <Fail>ペアリング失敗</Fail>
+    <Retry>再試行</Retry>
+  </Pair>
+		
+  <Update>
+    <Check>アップデートを確認</Check>
+    <Checking>確認中</Checking>
+    <LatestVersion>最新バージョンです</LatestVersion>
+    <Updating>更新中です。デバイスの取り外しはしないでください：</Updating>
+    <Success>更新成功</Success>
+    <Fail>更新失敗</Fail>
+    <Ready>「アップデート開始」ボタンをクリックしてアップグレードを開始してください</Ready>
+    <Empty>まずドングルを抜き、有線モードでキーボードを接続してからアップグレードを開始してください</Empty>
+    <Multi>複数のデバイスまたは受信機が検出されました。アップグレードするものを残してください</Multi>
+    <UpdateButton>アップグレード</UpdateButton>
+    <UpdateCancel>キャンセル</UpdateCancel>
+    <UpdateCertain>確認</UpdateCertain>
+    <UpdateNoDongle>新しいファームウェアはキーボードのみアップグレード可能です。受信機を先に抜いてください。</UpdateNoDongle>
+    <Auto>キーボードの新しいファームウェアが見つかりました。アップデートしますか？</Auto>
+  </Update>
+		
+  <Dialog>
+    <NoResources>画像リソースがありません</NoResources>
+    <ErrorDriveConfig>ドライバ設定が存在しないか、誤っています</ErrorDriveConfig>
+    <ProgramRuning>プログラムは実行中です</ProgramRuning>
+    <DeviceConnecting>お待ちください、設定を更新中です</DeviceConnecting>
+    <ConnectTimeout>接続がタイムアウトしました。デバイスを動かしてください</ConnectTimeout>
+    <NoDevice>操作可能なデバイスが検出されませんでした</NoDevice>
+    <ConnectDevice>ゲーム機器を接続してください</ConnectDevice>
+    <ComboKey>少なくとも1つのコントロールキーと通常キーを選択してください</ComboKey>
+    <ErrorMacroFile>インポートしたマクロファイルが間違っています</ErrorMacroFile>
+    <CreateMacro>まずマクロを作成してください</CreateMacro>
+    <SameMacro>同名のファイルがすでに存在します</SameMacro>
+    <InputName>名前を入力してください</InputName>
+    <SelectMacro>まずマクロを選択してください</SelectMacro>
+    <StopMacro>マクロ録画を停止してください</StopMacro>
+    <InputKey>キーを入力してください</InputKey>
+    <Delete>削除してもよろしいですか？</Delete>
+    <MaxMacroKey>マクロキー数が上限に達しました</MaxMacroKey>
+    <InputDelay>遅延時間を入力してください</InputDelay>
+    <InputComboKey>単一キーまたは複合キーを入力してください</InputComboKey>
+    <ReserveLeftKey>左キーは必ず残してください</ReserveLeftKey>
+    <Restore>デフォルト設定に戻しますか？</Restore>
+    <ImportConfig>お待ちください、設定をインポート中です</ImportConfig>
+    <ErrorConfig>インポートした設定が誤っています</ErrorConfig>
+    <ErrorDevice>インポートした設定がこのデバイスと一致しません</ErrorDevice>
+    <MultiDevice>同じデバイスが複数存在します。操作するデバイスを残してください</MultiDevice>
+    <Offline>デバイスはオフライン状態です。まずデバイスを起動するか電源を入れてください</Offline>
+    <SelectKey>まずキーを選択してください</SelectKey>
+    <DefaultDelayMin>デフォルト遅延値は10以上です</DefaultDelayMin>
+    <DevNewVerTips>マウスと受信機の両方を最新ファームウェアに更新してください。更新後は必ずペアリングしてからご使用ください！</DevNewVerTips>
+    <DongleIsNewTips>マウスに新しいファームウェアが見つかりました。有線接続で先に更新してください！</DongleIsNewTips>
+    <MouseIsNewTips>受信機に新しいファームウェアが見つかりました。今すぐ更新しますか？</MouseIsNewTips>
+    <FirmwareNewTips>新しいファームウェアが見つかりました。更新してください！</FirmwareNewTips>
+    <OnlyWireless>必ずデバイスを無線モードに設定してから操作してください</OnlyWireless>
+    <ChangeConfig>設定を切り替えますか？</ChangeConfig>
+    <Confirm>確定</Confirm>
+  </Dialog>
+</ToTal>

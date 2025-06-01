@@ -195,6 +195,37 @@ pub const DEVICE_TRUST_GXT_960: DeviceSpec = DeviceSpec {
     ..DEVICE_BASE_SH68F90
 };
 
+// Lofree Flow Lite in bootloader mode (VID:3554 PID:F808)
+pub const DEVICE_LOFREE_FLOW_LITE_BOOTLOADER: DeviceSpec = DeviceSpec {
+    vendor_id: 0x3554,
+    product_id: 0xf808,
+    platform: PlatformSpec {
+        firmware_size: 62144,  // From analysis: 0x1600 to 0xF4C0 = ~62KB
+        bootloader_size: 5632, // 0x1600 = 5632 bytes for bootloader
+        page_size: 32,         // 32-byte chunks from protocol analysis
+    },
+    isp_iface_num: 0,
+    isp_report_id: 6,  // Flow Lite uses report ID 0x06
+    reboot: true,   // Enable automatic reboot for Flow Lite
+};
+
+// Lofree Flow Lite in runtime mode (VID:05AC PID:024F) - needs mode switching
+pub const DEVICE_LOFREE_FLOW_LITE_RUNTIME: DeviceSpec = DeviceSpec {
+    vendor_id: 0x05ac,
+    product_id: 0x024f,
+    platform: PlatformSpec {
+        firmware_size: 62144,  // From analysis: 0x1600 to 0xF4C0 = ~62KB
+        bootloader_size: 5632, // 0x1600 = 5632 bytes for bootloader
+        page_size: 32,         // 32-byte chunks from protocol analysis
+    },
+    isp_iface_num: 1,      // Interface 1 has report ID 8 and vendor-specific usage
+    isp_report_id: 8,      // Use report ID 8 from Wireshark analysis
+    reboot: false,         // Disable automatic reboot for Flow Lite
+};
+
+// Alias for backward compatibility
+pub const DEVICE_LOFREE_FLOW_LITE: DeviceSpec = DEVICE_LOFREE_FLOW_LITE_BOOTLOADER;
+
 pub const DEVICE_GLORIOUS_MODEL_O: DeviceSpec = DeviceSpec {
     vendor_id: 0x258a,
     product_id: 0x0036,
@@ -266,6 +297,9 @@ pub static DEVICES: Map<&'static str, DeviceSpec> = phf_map! {
     "glorious-model-o" => DEVICE_GLORIOUS_MODEL_O,
     "kzzi-k68pro" => DEVICE_KZZI_K68PRO,
     "leobog-hi75" => DEVICE_LEOBOG_HI75,
+    "lofree-flow-lite" => DEVICE_LOFREE_FLOW_LITE,
+    "lofree-flow-lite-bootloader" => DEVICE_LOFREE_FLOW_LITE_BOOTLOADER,
+    "lofree-flow-lite-runtime" => DEVICE_LOFREE_FLOW_LITE_RUNTIME,
     "machenike-k500-b61" => DEVICE_MACHENIKE_K500_B61,
     "magegee-mkstar61" => DEVICE_MAGEGEE_MKSTAR61,
     "nuphy-air60" => DEVICE_NUPHY_AIR60,
