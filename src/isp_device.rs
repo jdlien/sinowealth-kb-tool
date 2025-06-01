@@ -494,8 +494,8 @@ impl ISPDevice {
             // Fixed header bytes
             packet.extend_from_slice(&[0x00, 0x08, 0x00, 0x16]);
 
-            // Address (little-endian)
-            packet.extend_from_slice(&address.to_le_bytes());
+            // Address (big-endian - high byte first, matching C# implementation)
+            packet.extend_from_slice(&address.to_be_bytes());
 
             // Data (padded to 32 bytes with 0xFF)
             packet.extend_from_slice(chunk);
@@ -728,7 +728,8 @@ impl ISPDevice {
 
     /// Wait for bootloader ACK after VERIFY command
     fn lofree_wait_for_ack(&self) -> Result<(), ISPError> {
-        const MAX_ATTEMPTS: u32 = 100;
+        // C# implementation uses 15-second timeout, so 150 attempts * 100ms = 15 seconds
+        const MAX_ATTEMPTS: u32 = 150;
         let mut attempts = 0;
         
         // On macOS, we need to use read_timeout instead of get_feature_report
@@ -737,13 +738,18 @@ impl ISPDevice {
         // Open a separate read handle if on macOS
         let hidapi = hidapi::HidApi::new().map_err(ISPError::HidError)?;
         
-        // CRITICAL FIX: On macOS, we need EXCLUSIVE access to read feature reports
-        // from devices using vendor/simulation usage pages. This is the opposite
-        // of what we do elsewhere in the code, but it's required for the bootloader.
+        // CRITICAL FIX: For Lofree bootloader on macOS, use NON-EXCLUSIVE access
+        // as exclusive access fails due to vendor usage page conflicts.
+        // For other devices on macOS, use exclusive access if needed.
         #[cfg(target_os = "macos")]
         {
-            eprintln!("Setting exclusive access for bootloader ACK reading...");
-            hidapi.set_open_exclusive(true);  // Changed from false to true!
+            if self.device_spec.is_lofree() {
+                eprintln!("Using non-exclusive access for Lofree bootloader (macOS HID fix)...");
+                hidapi.set_open_exclusive(false);
+            } else {
+                eprintln!("Setting exclusive access for bootloader ACK reading...");
+                hidapi.set_open_exclusive(true);
+            }
         }
         #[cfg(not(target_os = "macos"))]
         hidapi.set_open_exclusive(false);
@@ -834,9 +840,10 @@ impl ISPDevice {
                 }
             }
             
-            thread::sleep(time::Duration::from_millis(10));
+            thread::sleep(time::Duration::from_millis(100)); // 150 attempts * 100ms = 15 second timeout
         }
     }
+
 
     /// Try keyboard enable sequence based on DLL analysis
     fn lofree_try_keyboard_enable_sequence(&self) -> Result<(), ISPError> {

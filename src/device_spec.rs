@@ -348,6 +348,13 @@ impl DeviceSpec {
     pub fn total_flash_size(&self) -> usize {
         self.platform.firmware_size + self.platform.bootloader_size
     }
+
+    pub fn is_lofree(&self) -> bool {
+        // Check if this device is a Lofree Flow Lite (runtime or bootloader mode)
+        *self == DEVICE_LOFREE_FLOW_LITE_RUNTIME || 
+        *self == DEVICE_LOFREE_FLOW_LITE_BOOTLOADER ||
+        *self == DEVICE_LOFREE_FLOW_LITE
+    }
 }
 
 #[test]

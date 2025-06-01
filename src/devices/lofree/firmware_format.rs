@@ -17,12 +17,12 @@ pub struct UpgradeFileHeader {
     pub cid: u8,                     // Company/Customer ID
     pub mid: u8,                     // Module ID
     pub reserved: u8,                // Padding for alignment
-    
+
     // Fixed-size byte arrays (64 bytes each)
     pub file_id: [u8; 64],           // File identifier string
     pub ic_name: [u8; 64],           // IC/Chip name
     pub boot_input_endpoint: [u8; 64],    // Boot mode input endpoint
-    pub boot_output_endpoint: [u8; 64],   // Boot mode output endpoint  
+    pub boot_output_endpoint: [u8; 64],   // Boot mode output endpoint
     pub normal_input_endpoint: [u8; 64],  // Normal mode input endpoint
     pub normal_output_endpoint: [u8; 64], // Normal mode output endpoint
     pub reset_to_update_mode_cmd: [u8; 64], // Command to enter update mode
@@ -34,7 +34,7 @@ pub struct UpgradeFileHeader {
 
 impl UpgradeFileHeader {
     pub const HEADER_SIZE: usize = 720;
-    
+
     /// Create a new header with default values
     pub fn new() -> Self {
         Self {
@@ -60,26 +60,52 @@ impl UpgradeFileHeader {
             product_name: [0; 64],
         }
     }
-    
+
     /// Parse header from bytes
     pub fn from_bytes(data: &[u8]) -> Result<Self, &'static str> {
         if data.len() < Self::HEADER_SIZE {
             return Err("Data too short for upgrade file header");
         }
+
+        // Get the original head_crc from the header
+        let original_head_crc = u32::from_le_bytes([data[0], data[1], data[2], data[3]]);
         
-        // Safety: We've checked the length, and the struct is repr(C, packed)
-        unsafe {
-            let header = std::ptr::read(data.as_ptr() as *const Self);
-            
-            // Validate basic fields
-            if header.head_length != Self::HEADER_SIZE as u32 {
-                return Err("Invalid header length");
-            }
-            
-            Ok(header)
+        // Calculate checksum using the correct algorithm from C# decompiled code
+        // Sum bytes from position 8 to min(8192, data.len())
+        let mut sum: u32 = 0;
+        let end_pos = std::cmp::min(8192, data.len());
+        for i in 8..end_pos {
+            sum = sum.wrapping_add(data[i] as u32);
         }
+        
+        // Calculate expected CRC: magic number 0x55555555 minus the sum
+        let magic = 0x55555555u32;
+        let calculated_crc = magic.wrapping_sub(sum);
+
+        if calculated_crc != original_head_crc {
+            eprintln!("Header checksum mismatch. Expected: 0x{:08X}, Calculated: 0x{:08X}", original_head_crc, calculated_crc);
+            return Err("Header checksum validation failed");
+        }
+
+        // Perform a direct, potentially unaligned read into a local struct variable.
+        // Accesses to its fields must be done by copying them first.
+        let header_struct: Self = unsafe { std::ptr::read(data.as_ptr() as *const Self) };
+
+        // Copy fields to local, aligned variables before using them.
+        let actual_head_length = header_struct.head_length;
+        // We'll need fw_length later if we pass validation, so copy it too.
+        // let actual_fw_length = header_struct.fw_length;
+        // Actually, the caller (isp_device.rs) will do this copying if parsing succeeds.
+
+        if actual_head_length != Self::HEADER_SIZE as u32 {
+            eprintln!("Header length field mismatch. Expected: {}, Found: {}", Self::HEADER_SIZE, actual_head_length);
+            return Err("Invalid header length field");
+        }
+
+        // If all checks pass, return the copied struct.
+        Ok(header_struct)
     }
-    
+
     /// Convert header to bytes
     pub fn to_bytes(&self) -> Vec<u8> {
         unsafe {
@@ -87,14 +113,14 @@ impl UpgradeFileHeader {
             std::slice::from_raw_parts(ptr, Self::HEADER_SIZE).to_vec()
         }
     }
-    
+
     /// Get string from fixed-size byte array
     pub fn get_string_field(field: &[u8; 64]) -> String {
         // Find null terminator or use full length
         let end = field.iter().position(|&b| b == 0).unwrap_or(64);
         String::from_utf8_lossy(&field[..end]).to_string()
     }
-    
+
     /// Set string field (null-padded)
     pub fn set_string_field(field: &mut [u8; 64], value: &str) {
         field.fill(0);
@@ -102,20 +128,20 @@ impl UpgradeFileHeader {
         let len = std::cmp::min(bytes.len(), 63); // Leave space for null terminator
         field[..len].copy_from_slice(&bytes[..len]);
     }
-    
+
     // Getter methods for string fields
     pub fn file_id_str(&self) -> String {
         Self::get_string_field(&self.file_id)
     }
-    
+
     pub fn ic_name_str(&self) -> String {
         Self::get_string_field(&self.ic_name)
     }
-    
+
     pub fn product_name_str(&self) -> String {
         Self::get_string_field(&self.product_name)
     }
-    
+
     pub fn sensor_name_str(&self) -> String {
         Self::get_string_field(&self.sensor_name)
     }
@@ -140,25 +166,25 @@ impl LofreeFirmwareFile {
         if data.len() < UpgradeFileHeader::HEADER_SIZE {
             return Err("File too small to contain header");
         }
-        
+
         let header = UpgradeFileHeader::from_bytes(&data[..UpgradeFileHeader::HEADER_SIZE])?;
-        
+
         // Extract firmware data
         let firmware_start = UpgradeFileHeader::HEADER_SIZE;
         let firmware_end = firmware_start + header.fw_length as usize;
-        
+
         if data.len() < firmware_end {
             return Err("File too small to contain firmware data");
         }
-        
+
         let firmware_data = data[firmware_start..firmware_end].to_vec();
-        
+
         Ok(Self {
             header,
             firmware_data,
         })
     }
-    
+
     /// Convert to bytes for writing
     pub fn to_bytes(&self) -> Vec<u8> {
         let mut result = Vec::new();
@@ -166,12 +192,12 @@ impl LofreeFirmwareFile {
         result.extend_from_slice(&self.firmware_data);
         result
     }
-    
+
     /// Get firmware version string
     pub fn version_string(&self) -> String {
         crate::devices::lofree::usb_protocol::upgrade_constants::parse_version_string(self.header.version)
     }
-    
+
     /// Validate CRC32 if present
     pub fn validate_crc(&self) -> bool {
         // TODO: Implement CRC32 validation
@@ -184,47 +210,26 @@ impl LofreeFirmwareFile {
 pub mod crc32 {
     /// Calculate CRC32 for data
     pub fn calculate(data: &[u8]) -> u32 {
-        // Simple CRC32 implementation - replace with crc32fast crate for production
-        let mut crc = 0xFFFFFFFF_u32;
-        
-        for &byte in data {
-            crc ^= u32::from(byte);
-            for _ in 0..8 {
-                if crc & 1 != 0 {
-                    crc = (crc >> 1) ^ 0xEDB88320;
-                } else {
-                    crc >>= 1;
-                }
-            }
-        }
-        
-        !crc
-    }
-    
-    /// Validate CRC32 for firmware header
-    pub fn validate_header(header: &super::UpgradeFileHeader) -> bool {
-        let header_bytes = header.to_bytes();
-        let calculated_crc = calculate(&header_bytes[4..]); // Skip CRC field itself
-        calculated_crc == header.head_crc
+        crc32fast::hash(data)
     }
 }
 
 #[cfg(test)]
 mod tests {
     use super::*;
-    
+
     #[test]
     fn test_header_size() {
         assert_eq!(mem::size_of::<UpgradeFileHeader>(), UpgradeFileHeader::HEADER_SIZE);
     }
-    
+
     #[test]
     fn test_string_fields() {
         let mut header = UpgradeFileHeader::new();
         UpgradeFileHeader::set_string_field(&mut header.product_name, "Lofree Flow Lite");
         assert_eq!(header.product_name_str(), "Lofree Flow Lite");
     }
-    
+
     #[test]
     fn test_crc32_basic() {
         let data = b"hello";

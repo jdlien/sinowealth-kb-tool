@@ -4,11 +4,13 @@
 pub mod firmware_format;
 pub mod usb_protocol;
 pub mod device_info;
+pub mod firmware_operations;
 
 // Re-export key types for convenience
 pub use firmware_format::{UpgradeFileHeader, LofreeFirmwareFile};
 pub use usb_protocol::{UsbCommand, UsbCommandID, DeviceEndpoints};
 pub use device_info::{DeviceInfo, VidPid};
+pub use firmware_operations::{FirmwareFile, FirmwareUpgrader, known_firmware};
 
 /// Main entry point for Lofree Flow Lite support
 pub struct LofreeLiteDevice {
